@@ -58,6 +58,6 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
 </table>
 
 <a href="index.php"> Voltar </a>
-<a href="pdf.php"> Imprimir </a>
+<a href="relat_user.php"> Fazer o download em PDF</a>
 </body>
 </html>
