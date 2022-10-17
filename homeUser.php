@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="assets/homeUser.css" />
   </head>
   <body>
-    <h1>SEJA BEM-VINDO!</h1>
     <main class="main">
+      <h1>SEJA BEM-VINDO!</h1>
      
       <div class="containerInput">
         <span id="msg"></span>

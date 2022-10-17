@@ -57,7 +57,7 @@ $dados=mysqli_fetch_array($sql_consulta);
             <i></i>
           </div>
 
-      Nivel<br> <!-- O nome nível está contido na página, mas não aparece por conta da falta de CSS, 
+      <br> <!-- O nome nível está contido na página, mas não aparece por conta da falta de CSS, 
         para ver que existe, basta selecionar com o cursor-->
         <select name = "nivel" id = "nivel" >
             <option value='<?= $dados[6]?>'><?= $dados[6]?></option>
