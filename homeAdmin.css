@@ -1,0 +1,46 @@
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .btn {
+    display: flex;
+    align-self: center;
+    width: 20rem;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+  
+    margin-top: 3rem;
+    background-color: #060552;
+    color: #fff;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    transition: 0.4s;
+  }
+  
+  .btn:hover {
+    background-color: #38aecc;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .btn {
+      width: 10rem;
+    }
+  }
+  
+  .title {
+    text-align: center;
+    padding-top: 2rem;
+    text-align: center;
+    color: #060552;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .title {
+      font-size: 1.4rem;
+    }
+  }
