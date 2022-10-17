@@ -1,0 +1,55 @@
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+table {
+  width: 90vw;
+  margin: auto;
+}
+
+th {
+  background-color: #ccc;
+  padding: 10px;
+  border-right: 1px solid white;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+}
+
+/* tr:nth-child(even) {
+  background-color: orange;
+}
+
+tr:nth-child(odd) {
+  background-color: #F0D500;
+}
+ */
+
+
+
+.editar {
+  background-color: #F0D500;
+  transition: 400ms;
+}
+
+.editar:hover {
+  background-color: yellow;
+  color: #000;
+}
+
+.excluir {
+  background-color: #F32013;
+  transition: 400ms;
+}
+
+.excluir:hover {
+  background-color: red;
+}
+
+.total td {
+  background-color: dodgerblue;
+}

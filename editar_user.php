@@ -21,7 +21,7 @@ $dados=mysqli_fetch_array($sql_consulta);
   </head>
 
   <body>
-    <h1>Editar usuários</h1>
+    <h1 class="title">Editar usuários</h1>
     <div class="tudo">
       <div class="bloco1">
         <form method = "POST" action="atualizar.php" class="form">

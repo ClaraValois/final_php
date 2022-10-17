@@ -1,0 +1,31 @@
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  display: flexbox;
+  width: 60vw;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+
+  list-style: none;
+}
+
+li {
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+a {
+  background-color: #060552;
+  border-radius: 7px;
+  padding: 20px;
+  transition: 400ms;
+}
+
+a:hover {
+  background-color: #38aecc;
+}

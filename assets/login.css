@@ -30,7 +30,20 @@
     justify-content: center;
     padding-bottom: 2rem;
   }
-  
+
+  .title a {
+    color: #060552;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 800ms;
+  }
+
+  .title a:hover {
+    color: #ccc;
+    background-color: #060552;
+  }
+
   .imgLogin {
     width: 100%;
     max-width: 30rem;

@@ -1,4 +1,4 @@
-Em produção.
+-- Em produção.
 
 create schema novo;
 use novo;
