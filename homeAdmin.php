@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="homeAdmin.css" />
+<link rel="stylesheet" href="assets/homeAdmin.css" />
 
 <main class="main">
   <h1 class="title">Seja bem vindo (a), o que você deseja?</h1>

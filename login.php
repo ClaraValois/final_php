@@ -8,8 +8,9 @@ $sql_log=mysqli_query($conn, "SELECT * FROM usuarios WHERE cpf = '$usuario' and 
 
 
 if (mysqli_num_rows($sql_log)!=0){
-
-    header ('location:home.php');
+ 
+    header('location:homeAdmin.php');
+ 
 }else{
     echo "<script>
     
