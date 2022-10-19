@@ -8,8 +8,8 @@ include_once 'banco.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/listarUser.css">
     <link rel="stylesheet" href="./assets/global.css">
+    <link rel="stylesheet" href="./assets/listarUser.css">
     <title>Lista de Usuários</title>
 </head>
 <body>
@@ -64,7 +64,9 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
 
 </table>
 
-<a href="index.php"> Voltar </a>
-<a href="relat_user.php"> Fazer o download em PDF</a>
+    <div class="opcoes" style="text-align: center; margin: 40px 50px">
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="index.php">Voltar</a>
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
+    </div>
 </body>
 </html>
