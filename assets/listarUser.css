@@ -30,7 +30,6 @@ tr:nth-child(odd) {
  */
 
 
-
 .editar {
   background-color: #F0D500;
   transition: 400ms;
@@ -52,4 +51,10 @@ tr:nth-child(odd) {
 
 .total td {
   background-color: dodgerblue;
+}
+
+.opcoes {
+  width: 50vw;
+  margin: auto;
+  border: 1px solid red;
 }
