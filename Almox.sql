@@ -25,11 +25,14 @@ id_area integer not null,
 nivel varchar (15),
 foreign key (id_area)  references area_depar (id_area)); 
 
-create table categorias (
-id_categoria integer auto_increment key,
-nome_categoria varchar (30)
+create table categorias(
+  id_categoria integer auto_increment key,
+  descricao varchar(30)
 );
-    
+
+insert into categorias(descricao) values("Escritório");
+insert into categorias(descricao) values("Laboratório");
+insert into categorias(descricao) values("Informática");
 
 CREATE TABLE modelo ( 
  id_modelo integer auto_increment primary key,  
