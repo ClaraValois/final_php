@@ -5,6 +5,7 @@ use almox;
 id_area integer auto_increment primary key,
 depar varchar (40)
  );
+ 
 create table usuarios(
 id_user integer auto_increment key,
 nome_user varchar (30),
@@ -12,8 +13,13 @@ senha varchar(10),
 cpf varchar (15) unique, 
 email_user varchar (120),
 telefone varchar (11),
-nivel varchar (15));
+nivel integer);
 
+
+insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel)
+ values(NULL,'Maria', '12345678', '255', 'clara@gmail', '12345', '1' );
+
+select * from usuarios;
 CREATE TABLE servidor ( 
  id_servidor integer auto_increment primary key,
  nome varchar(40),  
@@ -22,12 +28,12 @@ CREATE TABLE servidor (
  email varchar (80),  
  senha varchar (8),
 id_area integer not null,
-nivel varchar (15),
+
 foreign key (id_area)  references area_depar (id_area)); 
 
 create table categorias (
 id_categoria integer auto_increment key,
-nome_categoria varchar (30)
+descricao varchar (30)
 );
     
 
@@ -107,4 +113,3 @@ CREATE TABLE entrada (
  foreign key (id_prod) references produto (id_prod)
  ); 
  
-

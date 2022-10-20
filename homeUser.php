@@ -1,3 +1,11 @@
+<?php
+session_start();
+ if(isset($_SESSION['normal'])){
+  echo 'Bem-vindo'.$_SESSION['normal']. '';
+} else{
+  header('location:index.html');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -32,7 +40,7 @@
       <button type="submit" class="btn">Requisições</button>
       <!-- </a> -->
     </main>
-
+<a href="sair.php"> Sair</a> <!-- irá encerrar a Sessão> -->
     <script>
 
    // Receber o seletor form-pesquisar

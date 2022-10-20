@@ -65,7 +65,7 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
 </table>
 
     <div class="opcoes" style="text-align: center; margin: 40px 50px">
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="index.php">Voltar</a>
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="listas.php">Voltar</a>
         <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
     </div>
 </body>

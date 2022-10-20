@@ -15,5 +15,7 @@
          <li><a href="listarServidores.php">Servidores</a></li>
          <li><a href="listarDepars.php">Departamentos</a></li>
     </ul>
+    <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="homeAdmin.php">Voltar</a>
+
 </body>
 </html>
