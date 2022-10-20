@@ -1,0 +1,93 @@
+body {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 25fr;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas: "aside header" "aside main" "aside footer";
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(124, 106, 131, 1) 37%,
+      rgba(255, 197, 247, 1) 100%,
+      rgba(224, 191, 235, 1) 100%,
+      rgba(191, 143, 204, 1) 150%
+    );
+  }
+  
+  .main {
+    grid-area: main;
+    overflow-y: scroll;
+  }
+  
+  
+  .main::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
+  .header {
+    display: flex;
+    width: 100vw;
+    grid-area: header;
+    justify-content: space-between;
+    padding-inline-start: 5%;
+    padding-inline-end: 5%;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: rgb(243 232 243 / 80%);
+  }
+  
+  .details {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  
+  .details p {
+    margin-right: 3px;
+    transform: translateY(15%);
+  }
+  
+  .imgHeader {
+    width: 7rem;
+    height: 7rem;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .imgHeader {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  
+  .iconUser {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .iconCar {
+    width: 2.8rem;
+    height: 1.6rem;
+  }
+  
+  .iconCar:hover {
+    fill: #38aecc;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%);
+    color: #fff;
+    /* background-color: rgb(243 232 243 / 80%); */
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
