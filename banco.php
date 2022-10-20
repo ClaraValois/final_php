@@ -1,5 +1,5 @@
 <?php
 
-$conn=mysqli_connect('localhost','root','','novo');
+$conn=mysqli_connect('localhost','root','','almox');
 
 ?>
