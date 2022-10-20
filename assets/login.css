@@ -151,7 +151,7 @@
     color: #fff;
   }
   
-  .btn {
+  .btn, .buttonRedefinir {
     background: #fff;
     color: #060552;
     padding: 0.4rem;
@@ -161,8 +161,8 @@
     margin-bottom: 1rem;
   }
   
-  .btn:hover {
-    background-color: #27259a;
+  .btn, .buttonRedefinir:hover {
+    background-color: #060552;
     color: white;
   }
   

@@ -59,6 +59,19 @@
   padding: 10px 0px;
 }
 
+.title a {
+  color: #060552;
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 800ms;
+}
+
+.title a:hover {
+  color: #ccc;
+  background-color: #060552;
+}
+
 .imgLogin {
   width: 100%;
   max-width: 30rem;
@@ -201,5 +214,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: dodgerblue;
+  background-color: #060552;
 }

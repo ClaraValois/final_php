@@ -1,0 +1,175 @@
+<link rel="stylesheet" href="assets/global.css" />
+<link rel="stylesheet" href="/assets/login.css">
+
+<div class="content">
+  <form method="POST" class="form">
+    <ul class="title">
+      <a href="/">
+        <li>Login</li>
+      </a>
+      <a href="/cadastroUser.html">
+        <li>Cadastro</li>
+      </a>
+    </ul>
+
+    <div class="box">
+      <input type="text" required />
+      <span>Cpf</span>
+      <i></i>
+    </div>
+
+    <div class="box">
+      <input type="password" required />
+      <span>Senha</span>
+      <i></i>
+    </div>
+
+    <div class="box">
+      <input type="password" required />
+      <span>Confirmar senha</span>
+      <i></i>
+    </div>
+    <div class="submit">
+      <button class="buttonRedefinir">Confirmar</button>
+    </div>
+  </form>
+
+</div>
+<!-- 
+<style>
+.content {
+align-items: center;
+display: flex;
+justify-content: center;
+padding: 10rem 10%;
+gap: 3rem;
+height: 100vh;
+background: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 1) 22%,
+  rgba(87, 21, 109, 1) 61%,
+  rgba(37, 41, 149, 1) 100%,
+  rgba(83, 11, 95, 1) 100%
+);
+}
+
+@media screen and (max-width: 600px) {
+.content {
+  flex-wrap: wrap;  
+}
+}
+
+.form {
+width: 25rem;
+}
+
+.title {
+display: flex;
+gap: 2rem;
+justify-content: center;
+padding-bottom: 2rem;
+}
+
+.box {
+position: relative;
+margin-bottom: 1rem;
+}
+
+.box input {
+width: 100%;
+padding: 0.8rem;
+color: #fff;
+border: none;
+outline: none;
+font-size: 1rem;
+letter-spacing: 0.1em;
+background: transparent;
+box-shadow: none;
+}
+
+.box span {
+position: absolute;
+left: 0;
+color: #fff;
+padding: 0.4rem 0 1rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+pointer-events: none;
+transition: 0.5s;
+}
+
+.box input:valid ~ span,
+.box input:focus ~ span {
+color: #fff;
+transform: translatey(-20px);
+font-size: 0.8em;
+}
+
+.box i {
+position: absolute;
+width: 100%;
+height: 2px;
+left: 0;
+bottom: 0;
+background: #495057;
+overflow: hidden;
+}
+
+.box i::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+left: -100%;
+background: linear-gradient(
+  50deg,
+  #212529,
+  #f8f9fa,
+  #e9ecef,
+  #dee2e6,
+  #ced4da,
+  #adb5bd,
+  #6c757d,
+  #495057,
+  #343a40,
+  #212529
+);
+animation: animate 0.9s linear infinite;
+transition: 0.5s;
+}
+
+.box input:valid ~ i::before,
+.box input:focus ~ i::before {
+left: 0;
+}
+
+@keyframes animate {
+0% {
+  background-position-x: 0;
+}
+100% {
+  background-position-x: 280px;
+}
+}
+
+.submit {
+text-align: center;
+color: #fff;
+}
+
+.buttonRedefinir {
+background: #fff;
+color: #060552;
+padding: 0.4rem;
+border: 0.2rem solid #060552;
+border-radius: 0.5rem;
+transition: 0.5s;
+margin-bottom: 1rem;
+}
+
+.buttonRedefinir:hover {
+background-color: #060552;
+color: white;
+}
+
+</style> -->
