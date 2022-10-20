@@ -1,7 +1,7 @@
 <?php
 session_start();
  if(isset($_SESSION['normal'])){
-  echo 'Bem-vindo'.$_SESSION['normal']. '';
+  echo 'Bem-vindo '.$_SESSION['normal']. '';
 } else{
   header('location:index.html');
 }
