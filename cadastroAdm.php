@@ -16,7 +16,7 @@ if ($sql_cadastro==true){
     echo "<script>
     
 alert ('Usuário cadastrado com sucesso!');
-window.location.href='index.html';
+window.location.href='homeAdmin.php';
         </script>";
 
 }else{
