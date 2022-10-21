@@ -1,7 +1,7 @@
 <?php
 session_start();
  if(isset($_SESSION['normal'])){
-  echo 'Bem-vindo '.$_SESSION['normal']. '';
+echo '';
 } else{
   header('location:index.html');
 }
@@ -20,7 +20,7 @@ session_start();
 
 <body>
   <main class="main">
-    <h1>SEJA BEM-VINDO!</h1>
+    <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal']. '' ?>!</h1>
 
     <div class="containerInput">
       <span id="msg"></span>

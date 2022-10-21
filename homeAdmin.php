@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['adm'])){
 
-  echo 'Bem-vindo '.$_SESSION['adm']. ' - Administrador';
+  echo '';
 } else{
   header('location:index.html');
 }
@@ -12,7 +12,7 @@ if (isset($_SESSION['adm'])){
 
 
 <main class="main">
-  <h1 class="title">Seja bem vindo(a), o que você deseja?</h1>
+  <h1 class="title">Seja bem-vindo <?php echo $_SESSION['adm']. '' ?>, o que você deseja?</h1>
   <div class="actions">
     <a href="/cadastrarProduto">
       <button class="btn">Cadastrar novos produtos</button>
