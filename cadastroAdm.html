@@ -11,13 +11,7 @@
   <body>
     <div class="tudo">
       <div class="bloco1">
-        <form method="POST" action="cadastro.php" class="form">
-          <ul class="title">
-            <a href="index.html">
-              <li>Login</li>
-            </a>
-
-          </ul>
+        <form method="POST" action="cadastroAdm.php" class="form">
 
           <div class="box">
             <input type="text" name="nome" required />
@@ -48,7 +42,11 @@
             <span>Senha</span>
             <i></i>
           </div>
+          <select name="nivel" id="nivel">
+            <option value="Admin"> Administrador </option>
+          </select>
           <input type="submit" value="Cadastrar" class="btn">
+          
         </form>
 
       </div>

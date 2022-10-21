@@ -17,6 +17,9 @@ if (isset($_SESSION['adm'])){
     <a href="/cadastrarProduto">
       <button class="btn">Cadastrar novos produtos</button>
     </a>
+    <a href="cadastroAdm.html">
+      <button class="btn">Cadastrar outros Administradores</button>
+    </a>
     <a href="/requisicoesAdmin">
       <button class="btn">Requisições</button>
     </a>
