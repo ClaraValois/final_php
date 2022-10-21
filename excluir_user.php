@@ -12,7 +12,7 @@ if($excluir==true){
     window.location.href='listarUser.php';
             </script>";
 
-}else{
+} else{
     echo "<script>
     
     alert ('Falha ao excluir usuário!');

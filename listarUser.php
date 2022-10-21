@@ -49,7 +49,11 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
     <td> <?= $linhas[5] ?></td>
     <td> <?= $linhas[6] ?></td>
 
-    <td class="excluir"> <a href="excluir_user.php?codigo=<?= $linhas[0]?>"> Excluir</a></td>
+    <td class="excluir"> 
+        <form method="post" action="excluir_user.php?codigo=<?= $linhas[0]?>">
+            <input type="submit" style="background: inherit; font-family: inherit; font-size: inherit; color: white;" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')">            
+        </form>
+    </td>
     <td class="editar"> <a href="editar_user.php?codigo=<?= $linhas[0]?>"> Editar</a></td>
 
 </tr>
@@ -65,7 +69,7 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
 </table>
 
     <div class="opcoes" style="text-align: center; margin: 40px 50px">
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="listas.php">Voltar</a>
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="index.php">Voltar</a>
         <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
     </div>
 </body>
