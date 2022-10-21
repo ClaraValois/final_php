@@ -28,7 +28,7 @@ $sql_log=mysqli_query($conn,"SELECT * FROM usuarios WHERE cpf = '$usuario' AND s
    }
 
   }else{
-    echo 'email ou senha incorretos';
+    echo 'Dados inválidos! CPF ou senha incorretos';
   }
 
 }
