@@ -20,15 +20,13 @@ td {
   background-color: #eee;
 }
 
-/* tr:nth-child(even) {
+ /*tr:nth-child(even) {
   background-color: orange;
 }
 
 tr:nth-child(odd) {
   background-color: #F0D500;
-}
- */
-
+} */
 
 .editar {
   background-color: #F0D500;
@@ -56,5 +54,8 @@ tr:nth-child(odd) {
 .opcoes {
   width: 50vw;
   margin: auto;
-  border: 1px solid red;
+}
+
+.opcoes a:hover {
+  background-color: cornflowerblue;
 }

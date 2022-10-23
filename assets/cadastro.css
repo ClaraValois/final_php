@@ -217,3 +217,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #060552;
 }
+
+input::placeholder {
+  opacity: 0; outline: 0; border: 0;
+}
+
+input:focus::placeholder {
+  opacity: 1; outline: 0; border: 0;
+}

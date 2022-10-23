@@ -15,7 +15,9 @@
          <li><a href="listarAdmins.php">Administradores</a></li>
          <li><a href="listarDepars.php">Departamentos</a></li>
     </ul>
-    <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="homeAdmin.php">Voltar</a>
+    <div style="width: 90vw; margin: 40px auto; text-align: center;">
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" class="voltar" href="homeAdmin.php">Voltar</a>
+    </div>
 
 </body>
 </html>
