@@ -12,7 +12,7 @@ nome_user varchar (30),
 senha varchar(10),
 cpf varchar (15) unique, 
 email_user varchar (120),
-telefone varchar (11),
+telefone varchar (14),
 nivel integer);
 
 
@@ -115,4 +115,5 @@ CREATE TABLE entrada (
  foreign key (id_nf) references notafiscal (id_nf),
  foreign key (id_prod) references produto (id_prod)
  ); 
+ 
  
