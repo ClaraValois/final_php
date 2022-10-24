@@ -24,7 +24,7 @@ CREATE TABLE servidor (
  id_servidor integer auto_increment primary key,
  nome varchar(40),  
  cpf varchar (15), 
- telefone varchar (11),  
+ telefone varchar (14),  
  email varchar (80),  
  senha varchar (8),
 id_area integer not null,
