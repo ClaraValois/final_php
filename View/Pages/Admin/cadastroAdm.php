@@ -1,5 +1,6 @@
 <?php
-include_once 'banco.php';
+include_once dirname(__DIR__, 3) . '/banco.php';
+
 
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];

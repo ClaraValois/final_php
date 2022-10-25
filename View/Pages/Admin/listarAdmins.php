@@ -1,5 +1,6 @@
 <?php
-include_once 'banco.php';
+include_once dirname(__DIR__, 3) . '/banco.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -8,13 +9,17 @@ include_once 'banco.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/global.css">
-    <link rel="stylesheet" href="./assets/listarUser.css">
-    <link rel="stylesheet" href="assets/template.css">
+    <link rel="stylesheet" href="/final_php/assets/global.css">
+    <link rel="stylesheet" href="/final_php/assets/listarUser.css">
+    <link rel="stylesheet" href="/final_php/assets/template.css">
     <title>Lista de Administradores </title>
 </head>
 
 <body>
+
+<?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
     <main class="main">
         <h1 class="title"> Lista de Administradores cadastrados</h1>
 

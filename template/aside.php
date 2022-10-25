@@ -1,64 +1,86 @@
 <aside>
-    <div class="container">
+    <div class="content-aside">
         <div class="navigation">
             <div class="menu-toggle"></div>
             <ul class="list">
-                <li class="list-item active" style="--color:#f44336">
-                    <a href="/homeAdmin.php">
-                        <span class="icon">
-                            <img src="assets/images/iconHome.png" alt="">
-                            <!-- <ion-icon name="home-outline"></ion-icon> -->
-                        </span>
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/Admin/homeAdmin.php">
+                        <img src="/final_php/assets/images/iconHome.png" alt="">
                         <span class="text">Home</span>
                     </a>
                 </li>
-                <li class="list-item" style="--color:#ffa117">
-                    <a href="#">
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/Admin/estoque.php">
                         <span class="icon">
-                            <img src="assets/images/iconList.png" alt="">
-
-                            <!-- <ion-icon name="alert-outline"></ion-icon> -->
+                            <img class="iconInventory" src="/final_php/assets/images/iconInventory.png" alt="">
                         </span>
                         <span class="text">Estoque</span>
                     </a>
                 </li>
-                <li class="list-item" style="--color:#0fc70f">
-                    <a href="#">
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/listas.php">
+
                         <span class="icon">
-                            <ion-icon name="call-outline"></ion-icon>
-                        </span>
-                        <span class="text">Requisições</span>
-                    </a>
-                </li>
-                <li class="list-item" style="--color:#2196f3">
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="grid-outline"></ion-icon>
+                            <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="">
                         </span>
                         <span class="text">Cadastros</span>
                     </a>
                 </li>
-                <li class="list-item" style="--color:#b145e9">
-                    <a href="listas.php">
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/Admin/listas.php">
                         <span class="icon">
-                            <img src="assets/images/iconList.png" alt="">
-                            <!-- <ion-icon name="pencil-outline"></ion-icon> -->
+                            <img class="iconInventory" src="/final_php/assets/images/iconList.png" alt="">
                         </span>
                         <span class="text">Listas</span>
                     </a>
                 </li>
-                <li class="list-item" style="--color:#b145e9"><a href="#">
+
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/Admin/requisicoes.php">
                         <span class="icon">
-                            <ion-icon name="pencil-outline"></ion-icon>
+                            <img class="iconInventory" src="/final_php/assets/images/iconRequirements.png" alt="">
+                        </span>
+                        <span class="text">Requisições</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/final_php/View/Pages/Admin/requisicoes.php">
+                        <span class="icon">
+                            <img class="iconInventory" src="/final_php/assets/images/iconReport.png" alt="">
                         </span>
                         <span class="text">Relatórios</span>
-                    </a></li>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/final_php/index.html">
+                        <span class="icon">
+                            <img class="iconInventory" src="/final_php/assets/images/iconLogout.png" alt="">
+                        </span>
+                        <span class="text">Sair</span>
+                    </a>
+                </li>
+
+
             </ul>
         </div>
     </div>
 </aside>
 
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    menuToggle.onclick = () => {
+        navigation.classList.toggle('open');
+    }
 
+    const listItems = document.querySelectorAll('.list-item');
+    listItems.forEach(item => {
+        item.onclick = () => {
+            listItems.forEach(item => item.classList.remove('active'));
+            item.classList.add('active');
+        }
+    })
+</script>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
@@ -70,18 +92,13 @@
         font-family: 'Poppins', sans-serif;
     }
 
-    .container {
+    .content-aside {
         width: 100%;
         min-height: 100vh;
-        /* display: flex;
-justify-content: flex-start;
-align-items: center; */
         background: #3d4152;
     }
 
     .navigation {
-        /* position: fixed; */
-        /* inset: 20px 0 20px 20px; */
         width: 75px;
         min-height: 500px;
         background: #fff;
@@ -97,12 +114,10 @@ align-items: center; */
 
     .navigation .menu-toggle {
         position: absolute;
-        /* position: fixed; */
         top: 0;
         left: 0;
         width: 5rem;
         height: 60px;
-        /* border-bottom: 1px solid rgba(0, 0, 0, 0.25); */
         cursor: pointer;
         display: flex;
         justify-content: flex-start;
@@ -161,13 +176,13 @@ align-items: center; */
         transition: 0.5s;
     }
 
-    .navigation ul li.active {
+    /* .navigation ul li.active {
         transform: translateX(30px);
     }
 
     .navigation.open ul li.active {
         transform: translateX(10px);
-    }
+    } */
 
     .navigation ul li a {
         text-decoration: none;
@@ -232,5 +247,10 @@ align-items: center; */
 
     .navigation ul li.active a .text {
         color: var(--color);
+    }
+
+    .iconInventory {
+        width: 35px;
+        height: 35px;
     }
 </style>

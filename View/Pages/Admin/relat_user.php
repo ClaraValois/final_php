@@ -1,7 +1,7 @@
 <?php
 //* Gera relatório pdf para impressão*//
+include_once dirname(__DIR__, 3) . '/banco.php';
 
-include_once 'banco.php';
 
 
 
@@ -46,7 +46,7 @@ $html.='</table>';
 
 use Dompdf\Dompdf; //* pasta com os recursos necessários*//
 
-include_once 'dompdf/autoload.inc.php';
+include_once dirname(__DIR__, 3) . '/dompdf/autoload.inc.php';
 
 $dompdf = new DOMPDF();
 
