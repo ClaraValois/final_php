@@ -1,8 +1,8 @@
 <?php
 session_start();
- if(isset($_SESSION['normal'])){
-echo '';
-} else{
+if (isset($_SESSION['normal'])) {
+  echo '';
+} else {
   header('location:index.html');
 }
 ?>
@@ -14,13 +14,15 @@ echo '';
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/homeUser.css" />
-  <link rel="stylesheet" href="/assets/template.css">
+  <!-- <link rel="stylesheet" href="/assets/template.css"> -->
+  <link rel="stylesheet" href="assets/template.css">
+
 
 </head>
 
 <body>
   <main class="main">
-    <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal']. '' ?>!</h1>
+    <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal'] . '' ?>!</h1>
 
     <div class="containerInput">
       <span id="msg"></span>
@@ -30,22 +32,20 @@ echo '';
       </form>
       <span id="listar-usuarios"></span>
 
-          <button class="searchbutton">
-            <img class="iconSearch"
-              src="/Resources/Assets/Imagens/iconSearch.png" alt="">
-          </button>
-        </div>
-      </div>
-      <!-- <a href="/requisicoes"> -->
-      <button type="submit" class="btn">Requisições</button>
-      <!-- </a> -->
-      <a href='index.html'>Sair</a>
-    </main>
+      <button class="searchbutton">
+        <img class="iconSearch" src="/Resources/Assets/Imagens/iconSearch.png" alt="">
+      </button>
+    </div>
+    </div>
+    <!-- <a href="/requisicoes"> -->
+    <button type="submit" class="btn">Requisições</button>
+    <!-- </a> -->
+    <a href='index.html'>Sair</a>
+  </main>
 
-    <script>
-
-   // Receber o seletor form-pesquisar
-const formPesquisar = document.getElementById("form-pesquisar");
+  <script>
+    // Receber o seletor form-pesquisar
+    const formPesquisar = document.getElementById("form-pesquisar");
 
     // Verificar se existe o form-pesquisar
     if (formPesquisar) {

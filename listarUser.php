@@ -10,9 +10,32 @@ include_once 'banco.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/global.css">
     <link rel="stylesheet" href="./assets/listarUser.css">
+    <link rel="stylesheet" href="assets/template.css">
+
     <title>Lista de Usuários</title>
 </head>
 <body>
+
+<header>
+
+  <div>
+    <a href="/home">
+      <img class="imgHeader" src="assets/images/LogoHeader.png" alt="" />
+    </a>
+  </div>
+  <div class="details">
+    <img class="iconUser" src="assets/images/iconUser.png" alt="">
+    <p>Olá,</p>
+    <p></p>
+    
+    <a href="/carrinho">
+      <img class="iconCar" src="assets/images/carrinhovector.png" alt="">
+    </a>
+  </div>
+  
+</header>
+
+<main class="main">
 <h1 class="title"> Lista de Usuários cadastrados</h1>
 
 <table rules="all">
@@ -41,13 +64,13 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
 {?>
 
 <tr>
-    <td> <?= $linhas[0] ?> </td>
-    <td> <?= $linhas[1] ?> </td>
-    <td> <?= $linhas[2] ?></td>
-    <td> <?= $linhas[3] ?></td>
-    <td> <?= $linhas[4] ?></td>
-    <td> <?= $linhas[5] ?></td>
-    <td> <?= $linhas[6] ?></td>
+    <td data-label="Código"> <?= $linhas[0] ?> </td>
+    <td data-label="Usuário"> <?= $linhas[1] ?> </td>
+    <td data-label="Senha"> <?= $linhas[2] ?></td>
+    <td data-label="CPF"> <?= $linhas[3] ?></td>
+    <td data-label="E-mail"> <?= $linhas[4] ?></td>
+    <td data-label="Telefone"> <?= $linhas[5] ?></td>
+    <td data-label="Nível"> <?= $linhas[6] ?></td>
 
     <td class="excluir"> 
         <form method="post" action="excluir_user.php?codigo=<?= $linhas[0]?>">
@@ -72,5 +95,6 @@ while ($linhas=mysqli_fetch_array($sql_consulta))
         <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="index.php">Voltar</a>
         <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
     </div>
+</main>
 </body>
 </html>
