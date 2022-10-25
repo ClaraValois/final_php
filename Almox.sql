@@ -12,7 +12,7 @@ nome_user varchar (30),
 senha varchar(10),
 cpf varchar (15) unique, 
 email_user varchar (120),
-telefone varchar (14),
+telefone varchar (16),
 nivel integer);
 
 
@@ -24,7 +24,7 @@ CREATE TABLE servidor (
  id_servidor integer auto_increment primary key,
  nome varchar(40),  
  cpf varchar (15), 
- telefone varchar (14),  
+ telefone varchar (16),  
  email varchar (80),  
  senha varchar (8),
 id_area integer not null,
@@ -115,5 +115,6 @@ CREATE TABLE entrada (
  foreign key (id_nf) references notafiscal (id_nf),
  foreign key (id_prod) references produto (id_prod)
  ); 
- 
+
+select * from usuarios;
  

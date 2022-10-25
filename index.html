@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/login.css" />
     <link rel="stylesheet" href="assets/global.css" />
+    <script type="text/javascript" src="./node_modules/jquery-3.6.1.min.js "></script> 
+    <script type="text/javascript" src="./node_modules/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script> 
     <title>Login</title>
   </head>
   <body>
@@ -22,7 +24,7 @@
         </div>
         <div class="box">
           <input type="text" name="username" data-field="username" value=""
-            autocomplete="off" required />
+            autocomplete="off" id="cpf" required />
           <span>CPF</span>
           <i></i>
         </div>
@@ -52,6 +54,10 @@
       </div>
     </div>
     <script>
+        jQuery(document).ready(function($){ 
+          $("#cpf").mask("000.000.000-00");
+        });
+
     //Função responsável por deixar a senha visível
         function myFunction() {
           var x = document.getElementById("senhaLogin");
