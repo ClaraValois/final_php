@@ -11,7 +11,7 @@
   <body>
     <div class="tudo">
       <div class="bloco1">
-        <form method="POST" action="cadastroUser.php" class="form">
+        <form method="POST" action="cadastroUser.php" class="form" id="form">
           <ul class="title">
             <a href="index.html">
               <li>Login</li>
@@ -26,32 +26,78 @@
           </div>
 
           <div class="box">
-            <input type="text" name=" cpf" required />
+            <input type="text" name="cpf" id="cpf" placeholder="123.456.789-00" required />
             <span>CPF</span>
             <i></i>
           </div>
 
           <div class="box">
-            <input type="text" name="tel" required />
+            <input type="text" name="tel" id="telefone" placeholder="(XX)(9)1234-5678" required />
             <span>Telefone</span>
             <i></i>
           </div>
 
           <div class="box">
-            <input type="text" name="email" required />
+            <input type="text" name="email" id="email" placeholder="exemplo@exemplo.com" required />
             <span>E-mail</span>
             <i></i>
           </div>
 
           <div class="box">
-            <input type="password" name="senha" required />
+            <input type="password" name="senha" id="senha" required />
             <span>Senha</span>
             <i></i>
           </div>
-          <input type="submit" value="Cadastrar" class="btn">
+          <!-- <input type="submit" value="Cadastrar" class="btn"> -->
         </form>
+
+        <button class="btn" onClick="validar()">Cadastrar</button>
 
       </div>
     </div>
+    <script>
+      function validar() {
+        var email = document.getElementById('email').value;
+        var telefone = document.getElementById('telefone').value;
+        var cpf = document.getElementById('cpf').value;
+        var senha = document.getElementById('senha').value;
+        var form = document.getElementById('form');
+
+        let regexEmail = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(email);
+        let regexTelefone = (/^(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/).test(telefone);
+        let regexCpf = (/^([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})$/).test(cpf);
+        let regexSenha = (/^.{6,15}$/).test(senha);
+
+        // Validação de Email
+
+        if(!regexEmail) {
+          alert("Valor inválido de email.");
+        }
+
+        // Validação de telefone
+
+        if(!regexTelefone) {
+          alert("Valor inválido de telefone. A formatação deve incluir traços e parênteses do DDD.");
+        }
+
+        // Validação CPF
+
+        if(!regexCpf) {
+          alert("Valor inválido de CPF.");
+        }
+
+        // Validação de Senha
+
+        if(!regexSenha) {
+          alert("Valor inválido para senha. Sua senha deve conter entre 6 e 15 caracteres.");
+        }
+
+        // Envio do formulário
+
+        if(regexEmail && regexTelefone && regexCpf) {
+          form.submit();
+        }
+      }
+    </script>
   </body>
 </html>

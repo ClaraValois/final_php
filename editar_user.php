@@ -21,9 +21,9 @@ $dados=mysqli_fetch_array($sql_consulta);
   </head>
 
   <body>
-    <h1 class="title">Editar usuários</h1>
     <div class="tudo">
-      <div class="bloco1">
+    <h1 class="title" style="color: white;">Editar usuários</h1>
+    <div class="bloco1">
         <form method = "POST" action="atualizar.php" class="form">
         
         <input type = "hidden" name = "codigo" value='<?= $dados[0]?>'>

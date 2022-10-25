@@ -83,7 +83,7 @@ function findError(field) {
 function customErroMessage(error) {
   let defaultMessage = 'Algo deu errado! Verifique seus dados novamente :D'; //Default message
   if (error == 'valueMissing') return 'Nenhum campo pode ficar vazio!';
-  if (error == 'tooShort') return 'Senhas abaixo de 8 caracteres não existem!';
+  if (error == 'tooShort') return 'Senhas abaixo de 6 caracteres não existem!';
   //if (error == 'passwordDontMatch') return 'Suas senhas não correspondem!';
   return defaultMessage;
 }

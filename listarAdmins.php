@@ -60,6 +60,7 @@ include_once 'banco.php';
 
             </tbody>
 
+<<<<<<< HEAD
         </table>
 
         <div class="opcoes" style="text-align: center; margin: 40px 50px">
@@ -67,6 +68,12 @@ include_once 'banco.php';
             <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
         </div>
     </main>
+=======
+    <div class="opcoes" style="text-align: center; margin: 40px auto; border: none;">
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="listas.php">Voltar</a>
+        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
+    </div>
+>>>>>>> 78b7fe5c9be7ce308b4aa0e92151c4001355267b
 </body>
 
 </html>
