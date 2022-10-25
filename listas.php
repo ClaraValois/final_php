@@ -10,16 +10,6 @@
     <link rel="stylesheet" href="assets/template.css">
     <title>Listagens</title>
 </head>
-<body>
-    <h1 class="title">Acesso a todas as listas do Sistema</h1>
-    <ul>
-         <li><a href="listarUser.php">Usuários</a></li>
-         <li><a href="listarAdmins.php">Administradores</a></li>
-         <li><a href="listarDepars.php">Departamentos</a></li>
-    </ul>
-    <div style="width: 90vw; margin: 40px auto; text-align: center;">
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" class="voltar" href="homeAdmin.php">Voltar</a>
-    </div>
 
 <body>
     <main class="main">
