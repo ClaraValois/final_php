@@ -1,22 +1,16 @@
+<header>
+  <a href="/home">
+    <img class="imgHeader" src="/final_php/assets/images/LogoHeader.png" alt="" />
+  </a>
 
-
-<div class="header">
-  <div>
-    <a href="/home">
-      <img
-        class="imgHeader"
-        src="/Resources/Assets/Imagens/LogoHeader.png"
-        alt=""
-      />
-    </a>
-  </div>
   <div class="details">
-    <img class="iconUser" src="/Resources/Assets/Imagens/iconUser.png" alt="" >
+    <img class="iconUser" src="/final_php/assets/images/iconUser.png" alt="">
     <p>Olá,</p>
-    <p><?php echo $_SESSION. '' ?></p>
+    <p></p>
 
     <a href="/carrinho">
-      <img class="iconCar" src="/Resources/Assets/Imagens/carrinhovector.png" alt="">
+      <img class="iconCar" src="/final_php/assets/images/carrinhovector.png" alt="">
     </a>
   </div>
-</div>
+
+</header>

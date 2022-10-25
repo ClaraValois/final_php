@@ -19,16 +19,17 @@ li {
   padding: 20px;
 }
 
-a {
+.item_page {
   background-color: #060552;
   border-radius: 7px;
   padding: 20px;
   transition: 400ms;
 }
 
-a:hover {
+.item_page:hover {
   background-color: #38aecc;
 }
+
 .title {
   text-align: center;
   padding: 20px;

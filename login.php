@@ -1,5 +1,6 @@
 <?php
-include_once 'banco.php';
+
+include_once __DIR__ . '/banco.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])){
  
@@ -19,10 +20,10 @@ $sql_log=mysqli_query($conn,"SELECT * FROM usuarios WHERE cpf = '$usuario' AND s
 
      if($nivel == 1){
       $_SESSION['adm'] = $nome;
-      header('location:homeAdmin.php');
+      header('location: View/Pages/Admin/homeAdmin.php');
      } else{
         $_SESSION['normal'] = $nome;
-        header('location:homeUser.php');
+        header('location: View/Pages/Usuario/homeUser.php');
      }
 
    }
@@ -66,7 +67,3 @@ if ($result->num_rows > 0) {
             </script>";
 }
 */
-
-
-
-?>

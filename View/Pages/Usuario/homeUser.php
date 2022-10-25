@@ -13,14 +13,17 @@ if (isset($_SESSION['normal'])) {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/homeUser.css" />
-  <!-- <link rel="stylesheet" href="/assets/template.css"> -->
-  <link rel="stylesheet" href="assets/template.css">
-
-
+  <link rel="stylesheet" href="/final_php/assets/homeUser.css" />
+  <!-- <link rel="stylesheet" href="/final_php/assets/template.css"> -->
+  <link rel="stylesheet" href="/final_php/assets/template.css">
 </head>
 
 <body>
+
+<?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
+<?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
+<?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
+
   <main class="main">
     <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal'] . '' ?>!</h1>
 
@@ -40,7 +43,6 @@ if (isset($_SESSION['normal'])) {
     <!-- <a href="/requisicoes"> -->
     <button type="submit" class="btn">Requisições</button>
     <!-- </a> -->
-    <a href='index.html'>Sair</a>
   </main>
 
   <script>

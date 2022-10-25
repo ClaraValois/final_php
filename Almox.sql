@@ -60,7 +60,7 @@ CREATE TABLE tipoProduto
 create table produto( id_prod INT auto_increment KEY,  
  quantDisp integer,  
  nome_prod varchar(30),  
- datacaptura date,
+ datacaworptura date,
  hora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
  id_marca integer not null,  
  id_modelo integer not null,  
