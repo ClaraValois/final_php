@@ -12,7 +12,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/estoque.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconInventory.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconInventory.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Estoque</span>
                     </a>
@@ -21,7 +21,7 @@
                     <a href="/final_php/View/Pages/listas.php">
 
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Cadastros</span>
                     </a>
@@ -29,7 +29,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/listas.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconList.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconList.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Listas</span>
                     </a>
@@ -38,7 +38,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/requisicoes.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconRequirements.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconRequirements.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Requisições</span>
                     </a>
@@ -46,7 +46,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/requisicoes.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconReport.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconReport.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Relatórios</span>
                     </a>
@@ -54,7 +54,7 @@
                 <li class="list-item">
                     <a href="/final_php/index.html">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconLogout.png" alt="">
+                            <img class="iconInventory" src="/final_php/assets/images/iconLogout.png" alt="" class="iconAside">
                         </span>
                         <span class="text">Sair</span>
                     </a>
