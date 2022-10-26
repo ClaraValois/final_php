@@ -158,7 +158,7 @@
     .navigation ul {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        /* gap: 10px; */
         width: 100%;
     }
 
@@ -185,13 +185,13 @@
     } */
 
     .navigation ul li a {
-        text-decoration: none;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        text-align: center;
-        align-items: center;
-    }
+    text-decoration: none;
+    /* position: relative; */
+    display: flex;
+    justify-content: flex-start;
+    /* text-align: center; */
+    align-items: center;
+}
 
     .navigation ul li a .icon {
         position: relative;
