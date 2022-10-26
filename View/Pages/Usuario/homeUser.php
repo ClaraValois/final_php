@@ -22,7 +22,6 @@ if (isset($_SESSION['normal'])) {
 
 <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
 <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
-<?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
 
   <main class="main">
     <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal'] . '' ?>!</h1>
