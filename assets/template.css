@@ -5,15 +5,15 @@ body {
   grid-template-rows: 80px 1fr 80px;
   grid-template-areas: "aside header" "aside main" "aside footer";
   height: 100vh;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
+  background: #DCD6F7;
+  /* background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(124, 106, 131, 1) 37%,
     rgba(255, 197, 247, 1) 100%,
     rgba(224, 191, 235, 1) 100%,
     rgba(191, 143, 204, 1) 150%
-  );
+  ); */
 }
 
 .main {
@@ -36,7 +36,12 @@ header {
   padding-inline-end: 5%;
   align-items: center;
   gap: 0.3rem;
-  background-color: rgb(243 232 243 / 80%);
+  background: rgb(79,0,106);
+  background: linear-gradient(357deg, rgba(79,0,106,1) 17%, rgba(111,0,145,1) 44%, rgba(116,0,147,1) 58%, rgba(161,0,187,1) 100%);
+}
+
+header img {
+  max-width: 250px;
 }
 
 .details {
@@ -90,4 +95,8 @@ header {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+}
+
+.iconAside:hover {
+  filter: invert(13%) sepia(29%) saturate(7409%) hue-rotate(275deg) brightness(0%) contrast(122%); 
 }

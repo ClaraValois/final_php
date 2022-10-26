@@ -23,7 +23,6 @@
             <li><a class="item_page" href="listarAdmins.php">Administradores</a></li>
             <li><a class="item_page" href="listarDepars.php">Departamentos</a></li>
         </ul>
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="homeAdmin.php">Voltar</a>
 
     </main>
 </body>

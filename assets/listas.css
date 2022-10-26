@@ -20,14 +20,14 @@ li {
 }
 
 .item_page {
-  background-color: #060552;
+  background-color: rgb(79,0,106);
   border-radius: 7px;
   padding: 20px;
   transition: 400ms;
 }
 
 .item_page:hover {
-  background-color: #38aecc;
+  background-color: #3d4152;
 }
 
 .title {

@@ -22,13 +22,12 @@ telefone='$telefone', nivel='$nivel' WHERE id_user='$id_user'" );
         echo "<script>     
                 alert ('Dados atualizados com sucesso!');
                 window.location.href='./listarUser.php';
-            </script>";
+              </script>";
 
     }else{
-        echo "<script>
-        
-        alert ('Falha em editar registro!');
-        window.location.href='editar_user.php';
-                </script>";
+        echo "<script>        
+                alert ('Falha em editar registro!');
+                window.location.href='editar_user.php';
+              </script>";
     }
 ?>

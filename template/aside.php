@@ -4,8 +4,8 @@
             <div class="menu-toggle"></div>
             <ul class="list">
                 <li class="list-item">
-                    <a href="/final_php/View/Pages/Admin/homeAdmin.php">
-                        <img src="/final_php/assets/images/iconHome.png" alt="">
+                    <a href="../View/Pages/Admin/homeAdmin.php">
+                        <img src="/final_php/assets/images/iconHome.png" alt="" class="iconAside">
                         <span class="text">Home</span>
                     </a>
                 </li>

@@ -1,6 +1,6 @@
 <header>
   <a href="/home">
-    <img class="imgHeader" src="/final_php/assets/images/LogoHeader.png" alt="" />
+    <img src="/final_php/assets/images/logo.png" alt="" />
   </a>
 
   <div class="details">
