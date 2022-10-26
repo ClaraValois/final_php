@@ -1,6 +1,7 @@
 <?php
 
-include_once dirname(__DIR__, 3) . '/banco.php';
+include_once dirname(__DIR__, 3) . './banco.php';
+//include_once '../banco.php';
 
 $id_user = $_GET['codigo'];
 

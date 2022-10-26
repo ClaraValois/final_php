@@ -5,7 +5,7 @@
 
   <div class="details">
     <img class="iconUser" src="/final_php/assets/images/iconUser.png" alt="">
-    <p>Olá,</p>
+    <!-- <p>Olá, <?php echo $_SESSION['normal'] . '' ?></p> -->
     <p></p>
 
     <a href="/carrinho">

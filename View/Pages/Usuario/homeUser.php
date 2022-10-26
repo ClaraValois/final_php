@@ -24,7 +24,6 @@ if (isset($_SESSION['normal'])) {
 <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
 
   <main class="main">
-    <h1>SEJA BEM-VINDO <?php echo $_SESSION['normal'] . '' ?>!</h1>
 
     <div class="containerInput">
       <span id="msg"></span>

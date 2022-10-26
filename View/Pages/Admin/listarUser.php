@@ -61,7 +61,7 @@ include_once dirname(__DIR__, 3) . '/banco.php';
                 <input type="submit" style="background: inherit; font-family: inherit; font-size: inherit; color: white; cursor: pointer;" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')">
               </form>
             </td>
-            <td class="editar"><a href="editar_user.php?codigo=<?= $linhas[0] ?>"> Editar</a></td>
+            <td class="editar"><a href="./editar_user.php?codigo=<?= $linhas[0] ?>"> Editar</a></td>
 
           </tr>
 
