@@ -78,6 +78,10 @@ table th {
     border-bottom: 0;
   }
 }
+
+table td {
+  word-wrap:break-word;
+}
  /*tr:nth-child(even) {
   background-color: orange;
 }
