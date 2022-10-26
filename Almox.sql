@@ -1,6 +1,10 @@
 create schema almox;
 use almox;
 
+create table produtoteste(
+nome_prod varchar (50)
+);
+
  create table area_depar(
 id_area integer auto_increment primary key,
 depar varchar (40)

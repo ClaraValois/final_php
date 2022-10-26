@@ -19,7 +19,7 @@ if (isset($_SESSION['adm'])) {
 <main class="main">
   <!-- <h1 class="title">Seja bem-vindo <?php echo $_SESSION['adm'] . '' ?>, o que você deseja?</h1> -->
   <div class="actions">
-    <a href="/cadastrarProduto">
+    <a href="/final_php/View/Pages/Admin/cadastroProduto.html">
       <button class="btn">Cadastrar novos produtos</button>
     </a>
     <a href="/final_php/View/Pages/Admin/cadastroAdm.html">

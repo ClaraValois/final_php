@@ -74,10 +74,7 @@ include_once dirname(__DIR__, 3) . '/banco.php';
         </div>
     </main>
 
-    <div class="opcoes" style="text-align: center; margin: 40px auto; border: none;">
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="listas.php">Voltar</a>
-        <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
-    </div>
+
 </body>
 
 </html>

@@ -4,7 +4,7 @@
             <div class="menu-toggle"></div>
             <ul class="list">
                 <li class="list-item">
-                    <a href="../View/Pages/Admin/homeAdmin.php">
+                    <a href="/final_php/View/Pages/Admin/homeAdmin.php">
                         <img src="/final_php/assets/images/iconHome.png" alt="" class="iconAside">
                         <span class="text">Home</span>
                     </a>
@@ -18,8 +18,7 @@
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/final_php/View/Pages/listas.php">
-
+                    <a href="/final_php/View/Pages/Admin/listas.php">
                         <span class="icon">
                             <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="">
                         </span>
