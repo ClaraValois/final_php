@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
     <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
     <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
 
     <main class="main">

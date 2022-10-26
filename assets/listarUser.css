@@ -5,7 +5,8 @@
 
  table {
   border-collapse: collapse;
-  margin: 0;
+  max-width: 80vw;
+  margin-left: 0%;
   padding: 0;
   width: 100%;
   table-layout: fixed;
