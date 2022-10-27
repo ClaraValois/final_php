@@ -1,10 +1,12 @@
 <?php
-session_start();
-if (isset($_SESSION['normal'])) {
-  echo '';
-} else {
-  header('location:index.html');
-}
+  session_start();
+  session_abort();
+
+  if (isset($_SESSION['normal'])) {
+    echo '';
+  } else {
+    header('location:index.html');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
