@@ -4,7 +4,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     margin-top: 5rem;
-    background-color: #060552;
+    background-color: rgb(79, 0, 106);
     color: #fff;
     font-size: 0.8rem;
     transition: 0.6s;
@@ -13,7 +13,7 @@
   }
   
   .btn:hover {
-    background-color: #38AECC;
+    background-color: #3d4152;
   }
   
   .searchbox {
@@ -25,31 +25,31 @@
   .searchinput {
     width: 100%;
     padding: 10px;
-    border: 2px solid #060552;
+    border: 2px solid rgb(79, 0, 106);
     border-radius: 10px 0 0 10px;
     border-right: none;
     outline: none;
     font-size: 20px;
-    color: #060552;
+    color: #3d4152;
     background: none;
   }
 
   .searchinput::placeholder {
-    color:#060552;
+    color:#3d4152;
   }
   
   .searchbutton {
     text-align: center;
-    height: 51px;
+    height: 55px;
     width: 40px;
     outline: none;
     cursor: pointer;
-    border: 2px solid #060552;
+    border: 2px solid #4f006a;
     border-radius: 0 10px 10px 0;
     border-left: none;
     background: none;
     font-size: 25px;
-    border-left: 4px solid #060552;
+    border-left: 2px solid #3d4152;
   }
   
   .containerInput {
@@ -60,11 +60,10 @@
     transform: translate(-50%, -50%);
   }
   
-  /* .iconSearch {
-    fill: #060552;
-    transition: 0.4s;
+  .iconSearch {
+    fill: invert(15%) sepia(28%) saturate(4293%) hue-rotate(264deg) brightness(103%) contrast(133%);
   }
   
   .iconSearch:hover {
-    fill: #38AECC;
-  } */
+    fill: invert(22%) sepia(23%) saturate(524%) hue-rotate(191deg) brightness(97%) contrast(87%);
+  } 

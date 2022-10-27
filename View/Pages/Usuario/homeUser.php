@@ -23,7 +23,7 @@
 <body>
 
 <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
-<?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
+<?php include dirname(__DIR__, 3) . "/template/asideUser.php"; ?>
 <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
 
   <main class="main">
@@ -37,7 +37,7 @@
       <span id="listar-usuarios"></span>
 
       <button class="searchbutton">
-        <img class="iconSearch" src="/Resources/Assets/Imagens/iconSearch.png" alt="">
+        <img class="iconSearch" src="/final_php/assets/images/iconSearch.png" alt="">
       </button>
     </div>
     </div>
