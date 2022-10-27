@@ -23,10 +23,14 @@ if (isset($_POST['username']) && isset($_POST['password'])){
      if($nivel == 1){
         $_SESSION['adm'] = $nome;
         header('location: View/Pages/Admin/homeAdmin.php');
-     } else{
+     } else {
         $_SESSION['normal'] = $nome;
+        if ($nome == "cocorico") {
+          header('location: View/Pages/Usuario/ripCocorico.php');
+        } else {
         header('location: View/Pages/Usuario/homeUser.php');
-     }
+        }
+      }
 
    }
 
