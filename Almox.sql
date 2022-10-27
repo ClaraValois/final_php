@@ -53,6 +53,9 @@ nivel integer);
 insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel)
  values(NULL,'Maria', '12345678', '255', 'clara@gmail', '12345', '1' );
 
+insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone)
+ values(0,'cocorico', 'sexo1234', '666.666.666-66', 'cocorico@sexo', '(77) 7 7777-7777');
+
 select * from usuarios;
 CREATE TABLE servidor ( 
  id_servidor integer auto_increment primary key,
