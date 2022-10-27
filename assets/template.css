@@ -19,7 +19,7 @@ body {
 .main {
   grid-area: main;
   overflow-y: scroll;
-  padding: 0 4rem 0 4rem;
+  padding: 0 4rem 0 0;
 }
 
 .main::-webkit-scrollbar {
@@ -32,7 +32,6 @@ header {
   width: 100vw;
   grid-area: header;
   justify-content: space-between;
-  padding-inline-start: 5%;
   padding-inline-end: 5%;
   align-items: center;
   gap: 0.3rem;
@@ -56,13 +55,12 @@ header img {
   transform: translateY(15%);
 }
 
-.imgHeader {
-  width: 7rem;
-  height: 7rem;
+header img {
+  width: 16rem;
 }
 
 @media screen and (max-width: 400px) {
-  .imgHeader {
+  header img {
     width: 5rem;
     height: 5rem;
   }

@@ -20,7 +20,7 @@ li {
 }
 
 .item_page {
-  background-color: rgb(79,0,106);
+  background-color: rgb(79, 0, 106);
   border-radius: 7px;
   padding: 20px;
   transition: 400ms;
@@ -35,7 +35,7 @@ li {
   padding: 20px;
 }
 
- table {
+table {
   border-collapse: collapse;
   margin: 0;
   padding: 0;
@@ -64,6 +64,8 @@ table th {
   font-size: 0.85em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  background-color: rgb(79, 0, 106);
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {

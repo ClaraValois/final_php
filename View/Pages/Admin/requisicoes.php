@@ -12,9 +12,9 @@
 </head>
 
 <body>
-<?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
-<?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
-<?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
+    <?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
 
     <main class="main">
         <div class="container">
@@ -53,11 +53,6 @@
                     </tr>
                 </tbody>
             </table>
-
-            <a href="#">
-                <button class="btn">Voltar</button>
-            </a>
-            </section>
         </div>
     </main>
 </body>

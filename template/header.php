@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
   session_start();
-?>
+?> -->
 
 <header>
   <a href="/home">
@@ -9,7 +9,7 @@
 
   <div class="details">
     <img class="iconUser" src="/final_php/assets/images/iconUser.png" alt="">
-    <p>Olá, <?php echo $_SESSION['username']?></p>
+    <!-- <p>Olá, <?php echo $_SESSION['username']?></p> -->
     <p></p>
 
     <a href="/carrinho">

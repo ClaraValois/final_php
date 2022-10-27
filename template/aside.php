@@ -99,7 +99,7 @@
 
     .navigation {
         width: 75px;
-        min-height: 500px;
+        min-height: 565px;
         background: #fff;
         transition: 0.5s;
         display: flex;
@@ -164,6 +164,12 @@
 
     .navigation ul li {
         list-style: none;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    /* list-style: none;
         position: relative;
         width: 100%;
         height: 60px;
@@ -172,8 +178,8 @@
         align-items: center;
         padding: 0 10px;
         cursor: pointer;
-        transition: 0.5s;
-    }
+        transition: 0.5s; */
+
 
     /* .navigation ul li.active {
         transform: translateX(30px);
@@ -184,13 +190,13 @@
     } */
 
     .navigation ul li a {
-    text-decoration: none;
-    /* position: relative; */
-    display: flex;
-    justify-content: flex-start;
-    /* text-align: center; */
-    align-items: center;
-}
+        text-decoration: none;
+        /* position: relative; */
+        display: flex;
+        justify-content: flex-start;
+        /* text-align: center; */
+        align-items: center;
+    }
 
     .navigation ul li a .icon {
         position: relative;

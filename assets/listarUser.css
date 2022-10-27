@@ -1,11 +1,14 @@
+.container {
+  padding: 2rem;
+}
+
 .title {
   text-align: center;
   padding: 20px;
 }
 
- table {
+table {
   border-collapse: collapse;
-  max-width: 80vw;
   margin-left: 0%;
   padding: 0;
   width: 100%;
@@ -33,6 +36,8 @@ table th {
   font-size: 0.85em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  background-color: rgb(79, 0, 106);
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -81,9 +86,9 @@ table th {
 }
 
 table td {
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
- /*tr:nth-child(even) {
+/*tr:nth-child(even) {
   background-color: orange;
 }
 
@@ -91,8 +96,8 @@ tr:nth-child(odd) {
   background-color: #F0D500;
 } */
 
-.editar {
-  background-color: #F0D500;
+/*.editar {
+  background-color: #f0d500;
   transition: 400ms;
 }
 
@@ -102,16 +107,17 @@ tr:nth-child(odd) {
 }
 
 .excluir {
-  background-color: #F32013;
+  background-color: #f32013;
   transition: 400ms;
 }
 
-.excluir:hover {
+ .excluir:hover {
   background-color: red;
-}
+} */
 
 .total td {
-  background-color: dodgerblue;
+  background-color: rgb(79, 0, 106);
+  color: #fff;
 }
 
 .opcoes {
@@ -119,7 +125,6 @@ tr:nth-child(odd) {
   margin: auto;
 
   border: 1px solid red; */
-
 }
 
 .opcoes a:hover {

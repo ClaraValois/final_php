@@ -20,65 +20,71 @@ include_once dirname(__DIR__, 3) . '/banco.php';
   <?php include dirname(__DIR__, 3) . "/template/header.php"; ?>
   <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
   <?php include dirname(__DIR__, 3) . "/template/aside.php"; ?>
-  
+
   <main class="main">
-    <h1 class="title"> Lista de Usuários cadastrados</h1>
+    <div class="container">
+      <h1 class="title"> Lista de Usuários cadastrados</h1>
 
-    <table rules="all">
+      <table rules="all">
 
-      <thead>
-        <tr>
-          <th> Código</th>
-          <th> Usuário</th>
-          <th> Senha</th>
-          <th> CPF</th>
-          <th> Email</th>
-          <th> Telefone</th>
-          <th> Nível</th>
-          <th colspan="2"> Opções</th>
-
-        </tr>
-      </thead>
-
-      <tbody>
-        <?php
-
-        $sql_consulta = mysqli_query($conn, "SELECT * FROM usuarios");
-        $total = mysqli_num_rows($sql_consulta);
-        while ($linhas = mysqli_fetch_array($sql_consulta)) { ?>
-
+        <thead>
           <tr>
-            <td data-label="Código"> <?= $linhas[0] ?> </td>
-            <td data-label="Usuário"> <?= $linhas[1] ?> </td>
-            <td data-label="Senha"> <?= $linhas[2] ?></td>
-            <td data-label="CPF"> <?= $linhas[3] ?></td>
-            <td data-label="E-mail"> <?= $linhas[4] ?></td>
-            <td data-label="Telefone"> <?= $linhas[5] ?></td>
-            <td data-label="Nível"> <?= $linhas[6] ?></td>
-
-            <td class="excluir">
-              <form method="post" action="excluir_user.php?codigo=<?= $linhas[0] ?>">
-                <input type="submit" style="background: inherit; font-family: inherit; font-size: inherit; color: white; cursor: pointer;" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')">
-              </form>
-            </td>
-            <td class="editar"><a href="./editar_user.php?codigo=<?= $linhas[0] ?>"> Editar</a></td>
+            <th> Código</th>
+            <th> Usuário</th>
+            <th> Senha</th>
+            <th> CPF</th>
+            <th> Email</th>
+            <th> Telefone</th>
+            <th> Nível</th>
+            <th colspan="2"> Opções</th>
 
           </tr>
+        </thead>
 
-        <?php } ?>
+        <tbody>
+          <?php
 
-        <tr class="total">
-          <td>Total de Registros: <?= $total ?></td>
-        </tr>
+          $sql_consulta = mysqli_query($conn, "SELECT * FROM usuarios");
+          $total = mysqli_num_rows($sql_consulta);
+          while ($linhas = mysqli_fetch_array($sql_consulta)) { ?>
 
-      </tbody>
+            <tr>
+              <td data-label="Código"> <?= $linhas[0] ?> </td>
+              <td data-label="Usuário"> <?= $linhas[1] ?> </td>
+              <td data-label="Senha"> <?= $linhas[2] ?></td>
+              <td data-label="CPF"> <?= $linhas[3] ?></td>
+              <td data-label="E-mail"> <?= $linhas[4] ?></td>
+              <td data-label="Telefone"> <?= $linhas[5] ?></td>
+              <td data-label="Nível"> <?= $linhas[6] ?></td>
 
-    </table>
+              <td data-label="Ação">
+                <form method="post" action="excluir_user.php?codigo=<?= $linhas[0] ?>">
+                  <img src="/final_php/assets/images/iconDelete.png" alt="icone Excluir" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')">
+                  <!-- <input type="submit" style="background: inherit; font-family: inherit; font-size: inherit; color: white; cursor: pointer;" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')"> -->
+                </form>
+              </td>
+              <td data-label="Ação">
+                <a href="./editar_user.php?codigo=<?= $linhas[0] ?>">
+                <img src="/final_php/assets/images/iconEdit.png" alt="icone Editar">
+                </a>
+              </td>
 
-    <div class="opcoes" style="text-align: center; margin: 40px auto; border: none;">
-      <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="/final_php/index.html">Voltar</a>
-      <a style="border: 1px solid black; border-radius: 10px; background-color: dodgerblue; padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
+            </tr>
+
+          <?php } ?>
+
+          <tr class="total">
+            <td>Total de Registros: <?= $total ?></td>
+          </tr>
+
+        </tbody>
+
+      </table>
     </div>
+    <div class="opcoes" style="text-align: center; margin: 40px auto; border: none;">
+      <a style="border: 1px solid black; border-radius: 10px; background-color: rgb(79,0,106); padding: 10px;" href="relat_user.php">Fazer o download em PDF</a>
+    </div>
+
   </main>
 </body>
 

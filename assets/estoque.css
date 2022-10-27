@@ -35,6 +35,8 @@
     font-size: 0.85em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    background-color: rgb(79,0,106);
+    color: #fff;
   }
   
   table tbody {
