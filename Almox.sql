@@ -11,18 +11,28 @@ insert into categorias(descricao) values("Escritório");
 insert into categorias(descricao) values("Laboratório");
 insert into categorias(descricao) values("Informática");
 
+create table disponibilidade(
+  id_disponibilidade integer auto_increment primary key,
+  descricao varchar(15)
+);
+
+insert into disponibilidade(descricao) values("Disponível");
+insert into disponibilidade(descricao) values("Indisponível");
+insert into disponibilidade(descricao) values("Em espera");
+
 create table produtoteste(
   nome_prod varchar (50),
   quantDisp integer,  
   id_categoria integer not null,
+  id_disponibilidade integer not null,
   datacaworptura date,
   hora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   id_marca integer not null,  
   id_modelo integer not null,  
   id_valor integer not null,
-  id_tipo integer not null,
   
-  foreign key(id_categoria) references categorias (id_categoria)
+  foreign key (id_categoria) references categorias (id_categoria),
+  foreign key (id_disponibilidade) references disponibilidade (id_disponibilidade)
 );
 
  create table area_depar(

@@ -151,15 +151,20 @@
     flex-shrink: 0;
   }
   
-  #statusRed {
+  .statusRed {
     background-color: red;
   }
-  #statusGreen {
+  
+  .statusGreen {
     background-color: green;
   }
   
-  #statusYellow {
+  .statusYellow {
     background-color: yellow;
+  }
+
+  .statusGray {
+    background-color: gray;
   }
   
   .iconEdit {

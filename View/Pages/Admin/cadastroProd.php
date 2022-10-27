@@ -48,6 +48,17 @@
             ?>
             </select>
           </div>
+
+          <!-- <div class="box">
+            <div class="statusBox">
+              <input type="radio" id="disponivel" name="status" value="1">
+              <label for="disponivel">Disponível</label>
+              <input type="radio" id="indisponivel" name="status" value="2">
+              <label for="indisponivel">Indisponível</label>
+              <input type="radio" id="em_espera" name="status" value="3">
+              <label for="em_espera">Em Espera</label>
+            </div>
+          </div> -->
                 <input type="submit" name="enviar" class="btn"><br>
             </form>
         </div>

@@ -230,3 +230,12 @@ h1{
   color: #fff;
   margin-bottom: 5rem;
 }
+
+.statusBox {
+  border: 1px solid white;
+
+}
+
+label {
+  color: white;
+}

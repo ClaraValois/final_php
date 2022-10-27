@@ -8,8 +8,14 @@
     $categoriaProduto = $_POST['categoria'];
     $quantidadeProduto = $_POST['quantidade'];
 
+    if ($quantidadeProduto > 0) {
+        $disponibilidadeProduto = 1;
+    } else {
+        $disponibilidadeProduto = 2;
+    }
+
     //povoamento da tabela;
-    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod, id_categoria, quantDisp) VALUES ('$nomeProduto', '$categoriaProduto', '$quantidadeProduto')");
+    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod, id_categoria, quantDisp, id_disponibilidade) VALUES ('$nomeProduto', '$categoriaProduto', '$quantidadeProduto', '$disponibilidadeProduto')");
 
     //checagem do cadastro;
     if ($sql_cadastro==true){
