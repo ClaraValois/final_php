@@ -37,6 +37,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
   }else{
     echo 'Dados inválidos! CPF ou senha incorretos';
   }
+
 }
 
 //$sql_log=mysqli_query($conn, "SELECT * FROM usuarios WHERE cpf = '$usuario' and senha = '$senha'");

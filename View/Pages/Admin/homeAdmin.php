@@ -1,11 +1,12 @@
 <?php
-session_start();
+  session_start();
+  session_abort();
 
-if (isset($_SESSION['adm'])) {
-  echo '';
-} else {
-  header('location: index.html');
-}
+  if (isset($_SESSION['adm'])) {
+    echo '';
+  } else {
+    header('location: index.html');
+  }
 ?>
 
 <link rel="stylesheet" href="/final_php/assets/homeAdmin.css" />
