@@ -5,14 +5,14 @@
             <ul class="list">
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/homeAdmin.php">
-                        <img src="/final_php/assets/images/iconHome.png" alt="" class="iconAside">
+                        <img src="/final_php/assets/images/iconHome.png" alt="">
                         <span class="text">Home</span>
                     </a>
                 </li>
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/estoque.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconInventory.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconInventory.png" alt="">
                         </span>
                         <span class="text">Estoque</span>
                     </a>
@@ -20,7 +20,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/listas.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconRegister.png" alt="">
                         </span>
                         <span class="text">Cadastros</span>
                     </a>
@@ -28,7 +28,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/listas.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconList.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconList.png" alt="">
                         </span>
                         <span class="text">Listas</span>
                     </a>
@@ -37,7 +37,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/requisicoes.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconRequirements.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconRequirements.png" alt="">
                         </span>
                         <span class="text">Requisições</span>
                     </a>
@@ -45,7 +45,7 @@
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Admin/requisicoes.php">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconReport.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconReport.png" alt="">
                         </span>
                         <span class="text">Relatórios</span>
                     </a>
@@ -53,7 +53,7 @@
                 <li class="list-item">
                     <a href="/final_php/index.html">
                         <span class="icon">
-                            <img class="iconInventory" src="/final_php/assets/images/iconLogout.png" alt="" class="iconAside">
+                            <img class="iconInventory" src="/final_php/assets/images/iconLogout.png" alt="">
                         </span>
                         <span class="text">Sair</span>
                     </a>

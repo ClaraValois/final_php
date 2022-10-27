@@ -32,6 +32,12 @@
           </div>
           
           <div class="box">
+            <input type="number" name="quantidade" id="quantidade">
+            <span>Quantidade</span>
+            <i></i>
+          </div>
+
+          <div class="box">
             <select name="categoria" id="categoria">
             <?php
             if ($categorias->num_rows > 0) {

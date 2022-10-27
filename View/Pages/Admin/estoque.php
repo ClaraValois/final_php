@@ -1,3 +1,7 @@
+<?php
+    include_once dirname(__DIR__, 3) . '/banco.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -32,18 +36,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="tr">
-                        <td data-label="Produto">Resma Papel A4</td>
-                        <td data-label="Quantidade">3</td>
+
+                <?php
+
+                        $sql_consulta = mysqli_query($conn, "SELECT * FROM produtoteste");
+                        $total = mysqli_num_rows($sql_consulta);
+                        while ($linhas = mysqli_fetch_array($sql_consulta)) { ?>
+
+                        <tr class="tr">
+                        <td data-label="Produto"><?= $linhas[0] ?></td>
+                        <td data-label="Quantidade"><?= $linhas[1] ?></td>
                         <td data-label="Status" class="status">
-                            <div class="radius" id="statusGreen"></div>
+                            <div class="radius" id="statusGreen"><?= $linhas[2] ?></div>
                         </td>
-                        <td data-label="Categoria">Escritorio</td>
+                        <td data-label="Categoria"><?php 
+                                $linhas[3] 
+                            ?>
+                        </td>
                         <td data-label="Ação">
-                            <img class="iconEdit" src="/Resources/Assets/Imagens/iconEdit.png" alt="icone de edit" id="myBtn">
+                            <img class="iconEdit" src="/final_php/assets/images/iconEdit.png" alt="icone de edit" id="myBtn">
                         </td>
                     </tr>
-                </tbody>
+                
+          <?php } ?>
+
+        </tbody>
             </table>
 
             <div id="myModal" class="modal">

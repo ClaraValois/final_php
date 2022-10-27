@@ -97,7 +97,13 @@ header img {
   flex-direction: column;
   padding: 1rem;
 }
-
+/* 
 .iconAside:hover {
   filter: invert(13%) sepia(29%) saturate(7409%) hue-rotate(275deg) brightness(0%) contrast(122%); 
+} */
+
+.list {
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }

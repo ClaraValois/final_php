@@ -1,18 +1,28 @@
 create schema almox;
 use almox;
 
+
+create table categorias(
+  id_categoria integer auto_increment key,
+  descricao varchar(30)
+);
+
+insert into categorias(descricao) values("Escritório");
+insert into categorias(descricao) values("Laboratório");
+insert into categorias(descricao) values("Informática");
+
 create table produtoteste(
   nome_prod varchar (50),
   quantDisp integer,  
+  id_categoria integer not null,
   datacaworptura date,
   hora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   id_marca integer not null,  
   id_modelo integer not null,  
   id_valor integer not null,
   id_tipo integer not null,
-  id_categoria integer not null,
-
- foreign key(id_categoria) references categorias(id_categoria)
+  
+  foreign key(id_categoria) references categorias (id_categoria)
 );
 
  create table area_depar(
@@ -44,15 +54,6 @@ CREATE TABLE servidor (
 id_area integer not null,
 
 foreign key (id_area)  references area_depar (id_area)); 
-
-create table categorias(
-  id_categoria integer auto_increment key,
-  descricao varchar(30)
-);
-
-insert into categorias(descricao) values("Escritório");
-insert into categorias(descricao) values("Laboratório");
-insert into categorias(descricao) values("Informática");
 
 CREATE TABLE modelo ( 
  id_modelo integer auto_increment primary key,  
