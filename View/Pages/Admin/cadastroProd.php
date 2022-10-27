@@ -1,7 +1,7 @@
 <?php
   include_once dirname(__DIR__, 3) . '/banco.php';
 
-  $lista = "SELECT (descricao, id_categoria) FROM categorias";
+  $lista = "SELECT * FROM categorias";
   $categorias = $conn->query($lista);
 ?>
 
