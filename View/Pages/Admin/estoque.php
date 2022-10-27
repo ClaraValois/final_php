@@ -72,66 +72,208 @@
                         ?>
                     </td>
                     <td data-label="Ação">
-                        <img class="iconEdit" src="/final_php/assets/images/iconEdit.png" alt="icone de edit" id="myBtn">
+                        <!-- <img class="iconEdit" src="/final_php/assets/images/iconEdit.png" alt="icone de edit" id="myBtn"> -->
+                        <button class="btnRequi" onclick="dialogv2.showModal()">Remover</button>
+                        <button class="btnRequi" onclick="addProd.showModal()">Adicionar</button>
                     </td>
                 </tr>
             
-          <?php } ?>
+                <?php } ?>
+      </tbody>
 
-        </tbody>
-            </table>
+      <dialog id="dialogv2">
+        <header>
+          <button class="btn"
+            class="close-dialog-btn"
+            onclick="this.closest('dialog').close('close')">
+            X
+          </button>
+          <!-- <h1>Nome do produto</h1> -->
+        </header>
 
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h1>Retornar aqui o nome do produto</h1>
-                    <div class="content">
-                        <div class="detailsProduct">
-                            <p className="products">Caneta Bic (Caixa)
-                            </p>
+        <div class="content">
+          <div class="detailsProduct">
+            <p className="products">produto </p>
 
-                            <div class="custom-checkbox">
-                                <input type="radio" id="radio_1" name="avaliacao" id="avaliacao_checkbox" value="10">
-                                <label for="radio_1"></label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btnModal">
-                        <button class="btn">Remover</button>
-                        <button class="btn">Adicionar</button>
-                    </div>
-                </div>
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
             </div>
 
-            <script>
-                // Get the modal
-                var modal = document.getElementById("myModal");
+            <div class="custom-checkbox">
+              <input type="radio" id="radio_1" name="avaliacao"
+                id="avaliacao_checkbox" value="10">
+              <label for="radio_1"></label>
+            </div>
+          </div>
+          <div style="
+            display: flex;
+            justify-content: center;
+            ">
+            <button class="btn">Remover</button>
 
-                // Get the button that opens the modal
-                var btn = document.getElementById("myBtn");
+          </div>
+        </dialog>
 
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
+        <dialog id="addProd">
+          <header>
+            <button class="btn"
+              class="close-dialog-btn"
+              onclick="this.closest('dialog').close('close')">
+              X
+            </button>
+            <h1>Nome do produto</h1>
+        </header>
 
-                // When the user clicks the button, open the modal
-                btn.onclick = function() {
-                    modal.style.display = "block";
-                };
+          <div class="content">
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function() {
-                    modal.style.display = "none";
-                };
+            <div class="detailsProduct">
+              <p className="products">produto </p>
 
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                };
-            </script>
+              <div class="counter">
+                <span class="down" onClick="decreaseCount(event, this)">-</span>
+                <input type="text" value="1" />
+                <span class="up" onClick="increaseCount(event, this)">+</span>
+              </div>
+
+              <div class="custom-checkbox">
+                <input type="radio" id="radio_1" name="avaliacao"
+                  id="avaliacao_checkbox" value="10">
+                <label for="radio_1"></label>
+              </div>
+            </div>
+            <div style=" display: flex; justify-content: center; ">
+              <button class="btn">Adicionar</button>
+            </div>
+
+          </div>
+        </dialog>
+      </table>
+
+            <div id="addProdEstoque" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>aaaaaa</h1>
+          <div class="content">
+            <div class="detailsProduct">
+              <p className="products">Caneta Bic (Caixa)</p>
+
+              <div class="custom-checkbox">
+                <input type="radio" id="radio_1" name="avaliacao"
+                  id="avaliacao_checkbox" value="10">
+                <label for="radio_1"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="btnModal">
+            <button class="btn">Adicionar</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+      function increaseCount(a, b) {
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+}
+function decreaseCount(a, b) {
+  var input = b.nextElementSibling;
+  var value = parseInt(input.value, 10);
+  if (value > 1) {
+    value = isNaN(value) ? 0 : value;
+    value--;
+    input.value = value;
+  }
+}
+    </script>
     </main>
 </body>
 
 </html>
+
+<style>
+
+    
+ .btnRequi {
+  background: #fff;
+  color: rgb(79, 0, 106);
+  padding: 0.4rem;
+  border: 0.2rem solid rgb(79, 0, 106);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btnRequi:hover {
+  background-color: rgb(79, 0, 106);
+color: #fff;}
+  dialog {
+  font-size: 1rem;
+  margin: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  background: #f4f4f4;
+  border-radius: 3px;
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  border: none;
+  padding: 0;
+}
+
+dialog header {
+  background: #cccccc;
+  padding: 0.5em;
+  text-align: right;
+  border-radius: 3px 0 0 3px;
+}
+
+dialog p {
+  padding: 1em; 
+}
+
+.close-dialog-btn {
+  border-radius: 100%;
+  border: none;
+  padding: 0.5em;
+  width: 30px;
+  height: 30px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(15px);
+}
+
+.counter {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter input {
+  width: 25px;
+  border: 0;
+  line-height: 15px;
+  font-size: 15px;
+  text-align: center;
+  background: #060552;
+  color: #fff;
+  appearance: none;
+  outline: 0;
+}
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #060552;
+  user-select: none;
+}
+
+</style>
