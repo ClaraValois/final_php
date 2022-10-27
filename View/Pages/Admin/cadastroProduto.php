@@ -16,10 +16,10 @@
 
         echo "<script>        
                 alert ('Produto cadastrado com sucesso!');
-                window.location.href='homeAdmin.php';
+                window.location.href='./homeAdmin.php';
             </script>";
     
-    }else{
+    } else{
         echo "<script>                    
                     alert ('Falha ao cadastrar Produto!');
                     window.location.href='cadastroProduto.html';

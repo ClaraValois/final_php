@@ -47,10 +47,15 @@
                         <td data-label="Produto"><?= $linhas[0] ?></td>
                         <td data-label="Quantidade"><?= $linhas[1] ?></td>
                         <td data-label="Status" class="status">
-                            <div class="radius" id="statusGreen"><?= $linhas[2] ?></div>
+                            <div class="radius" id="statusGreen"></div>
                         </td>
-                        <td data-label="Categoria"><?php 
-                                $linhas[3] 
+                        <td data-label="Categoria">
+                            <?php 
+                                $consulta_categoria = mysqli_query($conn, "SELECT * FROM categorias WHERE id_categoria = '$linhas[2]'");
+
+                                while ($categoria = mysqli_fetch_array($consulta_categoria)) {
+                                    echo $categoria['descricao'];
+                                }
                             ?>
                         </td>
                         <td data-label="Ação">

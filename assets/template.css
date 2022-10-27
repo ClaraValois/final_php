@@ -73,14 +73,13 @@ header img {
 }
 
 .iconCar {
-  max-width: 2rem;
-  height: 1.6rem;
+  max-width: 1.6rem;
   margin-right: 1.5em;
   filter: invert(100%) sepia(20%) saturate(7500%) hue-rotate(132deg) brightness(117%) contrast(110%);
 }
 
 .iconCar:hover {
-  fill: #38aecc;
+  fill: #a5a8a8;
 }
 
 .footer {
@@ -97,6 +96,7 @@ header img {
   flex-direction: column;
   padding: 1rem;
 }
+
 /* 
 .iconAside:hover {
   filter: invert(13%) sepia(29%) saturate(7409%) hue-rotate(275deg) brightness(0%) contrast(122%); 
@@ -106,4 +106,8 @@ header img {
   padding: 0;
   margin: 0;
   text-align: center;
+}
+
+.list {
+  margin-top: 1.4em;
 }
