@@ -13,7 +13,7 @@
     align-items: center;
   
     margin-top: 3rem;
-    background-color: #060552;
+    background-color: rgb(79,0,106);
     color: #fff;
     padding: 0.6rem;
     border-radius: 0.3rem;
@@ -21,7 +21,8 @@
   }
   
   .btn:hover {
-    background-color: #38aecc;
+    background-color: #060552;
+
   }
   
   @media screen and (max-width: 400px) {
