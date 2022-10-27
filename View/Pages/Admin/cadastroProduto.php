@@ -5,9 +5,10 @@
 
     //declaração das variaveis;
     $nomeproduto = $_POST['nomeproduto'];
+    $categoriaProduto = $_POST['categoria'];
 
     //povoamento da tabela;
-    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod) VALUES ('$nomeproduto')");
+    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod, id_categoria) VALUES ('$nomeproduto', '$categoriaProduto)");
 
     //checagem do cadastro;
     if ($sql_cadastro==true){

@@ -2,7 +2,17 @@ create schema almox;
 use almox;
 
 create table produtoteste(
-nome_prod varchar (50)
+  nome_prod varchar (50),
+  quantDisp integer,  
+  datacaworptura date,
+  hora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  id_marca integer not null,  
+  id_modelo integer not null,  
+  id_valor integer not null,
+  id_tipo integer not null,
+  id_categoria integer not null,
+
+ foreign key(id_categoria) references categorias(id_categoria)
 );
 
  create table area_depar(
@@ -121,4 +131,4 @@ CREATE TABLE entrada (
  ); 
 
 select * from usuarios;
- 
+select * from categorias;

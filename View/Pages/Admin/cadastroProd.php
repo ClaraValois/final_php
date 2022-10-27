@@ -1,7 +1,7 @@
 <?php
   include_once dirname(__DIR__, 3) . '/banco.php';
 
-  $lista = "SELECT descricao FROM categorias";
+  $lista = "SELECT (descricao, id_categoria) FROM categorias";
   $categorias = $conn->query($lista);
 ?>
 
@@ -30,19 +30,18 @@
             <span>Nome do Produto</span>
             <i></i>
           </div>
-
-      
-                <div class="box">
-                <select name="categoria" id="categoria">
-        <?php
-          if ($categorias->num_rows > 0) {
-            while ($item = $categorias->fetch_assoc()) {
-            echo "<option name='" . $item['descricao'] . "' id='" . $item['descricao'] . "'>" . $item['descricao'] . "</option>";
+          
+          <div class="box">
+            <select name="categoria" id="categoria">
+            <?php
+            if ($categorias->num_rows > 0) {
+              while ($item = $categorias->fetch_assoc()) {
+              echo "<option name='" . $item['categoria'] . "' id='" . $item['descricao'] . "' value='" . $item['id_categoria'] . "'>" . $item['descricao'] . "</option>";
+              }
             }
-          }
-          ?>
-        </select>
-        </div>
+            ?>
+            </select>
+          </div>
                 <input type="submit" name="enviar" class="btn"><br>
             </form>
         </div>
