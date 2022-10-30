@@ -8,8 +8,9 @@ $cpf = $_POST['cpf'];
 $telefone = $_POST['tel'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+$departamento = $_POST['depar'];
 
-$sql_cadastro=mysqli_query( $conn, "INSERT INTO usuarios (nome_user, email_user, cpf, telefone, senha) values ('$nome','$email','$cpf','$telefone','$senha')" );
+$sql_cadastro=mysqli_query( $conn, "INSERT INTO usuarios (nome_user, email_user, cpf, telefone, senha, id_area) values ('$nome','$email','$cpf','$telefone','$senha', '$departamento')" );
 
 if ($sql_cadastro==true){
 
@@ -21,7 +22,8 @@ if ($sql_cadastro==true){
 } else { 
     echo "<script>    
             alert ('Falha ao cadastrar!');
-            window.location.href='cadastroUser.html';
+            window.location.href='cadastroUserhtml.php';
+        
           </script>";
 }
 ?>

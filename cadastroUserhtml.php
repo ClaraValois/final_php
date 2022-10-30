@@ -1,3 +1,9 @@
+<?php
+  include_once 'banco.php';
+
+  $lista = "SELECT * FROM area_depar";
+  $depars = $conn->query($lista);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -51,8 +57,22 @@
             <i></i>
           </div>
           <!-- <input type="submit" value="Cadastrar" class="btn"> -->
+          <div class="box">
+        <span class="tag">Departamento:</span>
+        <br>
+        <br>
+        <select name="depar" id="depar">
+         <?php
+         if ($depars->num_rows > 0) {
+          while ($depar = $depars->fetch_assoc()) {
+          echo "<option name='" . $depar['depar'] . "' id='" . $depar['depar'] . "' value='" . $depar['id_area'] . "'>" . $depar['depar'] . "</option>";
+          }
+        }
+          ?>
+        </select>
+      </div>
+   
         </form>
-
         <button class="btn" onClick="validar()">Cadastrar</button>
 
       </div>
