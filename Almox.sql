@@ -37,9 +37,12 @@ create table produtoteste(
 
  create table area_depar(
 id_area integer auto_increment primary key,
-depar varchar (40)
- );
- 
+depar varchar (40) );
+
+insert into area_depar (depar) values ('DEPAD'),('DEPEN'),('CONSUP'),('DETEC');
+ SELECT * FROM area_depar;
+
+
 create table usuarios(
 id_user integer auto_increment key,
 nome_user varchar (30),
@@ -47,27 +50,17 @@ senha varchar(10),
 cpf varchar (15) unique, 
 email_user varchar (120),
 telefone varchar (16),
-nivel integer);
-
-
-insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel)
- values(NULL,'Maria', '12345678', '255', 'clara@gmail', '12345', '1' );
-
-insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone)
- values(0,'cocorico', 'sexo1234', '666.666.666-66', 'cocorico@sexo', '(77) 7 7777-7777');
-
-select * from usuarios;
-CREATE TABLE servidor ( 
- id_servidor integer auto_increment primary key,
- nome varchar(40),  
- cpf varchar (15), 
- telefone varchar (16),  
- email varchar (80),  
- senha varchar (8),
+nivel integer, 
 id_area integer not null,
+ foreign key (id_area) references area_depar (id_area)
+);
 
-foreign key (id_area)  references area_depar (id_area)); 
 
+
+insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel, id_area )
+ values(NULL,'Maria', '12345678', '255', 'clara@gmail', '12345', '1', '2' );
+
+ select *from usuarios;
 CREATE TABLE modelo ( 
  id_modelo integer auto_increment primary key,  
  descricao_mod varchar(30)); 
@@ -144,5 +137,3 @@ CREATE TABLE entrada (
  foreign key (id_prod) references produto (id_prod)
  ); 
 
-select * from usuarios;
-select * from categorias;
