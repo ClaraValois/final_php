@@ -9,10 +9,11 @@ $telefone = $_POST['tel'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $nivel = $_POST['nivel'];
+$depar = $_POST['depar'];
 
 
 $atualizar= mysqli_query( $conn, " UPDATE usuarios SET nome_user='$nome', senha='$senha', email_user='$email', cpf='$cpf',
-telefone='$telefone', nivel='$nivel' WHERE id_user='$id_user'" );
+telefone='$telefone', nivel='$nivel', id_area = '$depar' WHERE id_user='$id_user'" );
 
 
 

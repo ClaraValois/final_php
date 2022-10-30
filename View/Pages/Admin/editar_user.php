@@ -9,6 +9,8 @@ $sql_consulta = mysqli_query($conn, "SELECT * FROM usuarios WHERE id_user = '$id
 
 $dados = mysqli_fetch_array($sql_consulta);
 
+$lista = "SELECT * FROM area_depar";
+$depars = $conn->query($lista);
 ?>
 
 <!DOCTYPE html>
@@ -61,11 +63,21 @@ $dados = mysqli_fetch_array($sql_consulta);
         </div>
        
         <br>
-        <select name="nivel" id="nivel">
+        <select name="nivel" id="nivel"  >
           <option value='1'> Administrador</option>
           <option value="0"> Servidor</option>
         </select>
 
+        <select name="depar" id="depar"  >
+         <?php
+         if ($depars->num_rows > 0) {
+          while ($depar = $depars->fetch_assoc()) {
+          echo "<option name='" . $depar['depar'] . "' id='" . $depar['depar'] . "' value='" . $depar['id_area'] . "'>" . $depar['depar'] . "</option>";
+          }
+        }
+          ?>
+        </select>
+        <br><br>
         <input type="submit" value="Atualizar">
       </form>
 
