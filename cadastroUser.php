@@ -22,7 +22,7 @@ if ($sql_cadastro==true){
 } else { 
     echo "<script>    
             alert ('Falha ao cadastrar!');
-            window.location.href='cadastroUserhtml.php';
+            window.location.href='cadUserhtml.php';
         
           </script>";
 }

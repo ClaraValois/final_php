@@ -71,10 +71,10 @@
           ?>
         </select>
       </div>
-   
-        </form>
-        <button class="btn" onClick="validar()">Cadastrar</button>
+      <button class="btn" onClick="validar()">Cadastrar</button>
 
+        </form>
+       
       </div>
     </div>
     <script>
