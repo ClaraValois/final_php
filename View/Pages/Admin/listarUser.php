@@ -36,6 +36,7 @@ include_once dirname(__DIR__, 3) . '/banco.php';
             <th> Email</th>
             <th> Telefone</th>
             <th> Nível</th>
+            <th> Departamento</th>
             <th colspan="2"> Opções</th>
 
           </tr>
@@ -56,6 +57,7 @@ include_once dirname(__DIR__, 3) . '/banco.php';
               <td data-label="E-mail"> <?= $linhas[4] ?></td>
               <td data-label="Telefone"> <?= $linhas[5] ?></td>
               <td data-label="Nível"> <?= $linhas[6] ?></td>
+              <td data-label="Departamento"> <?= $linhas[7] ?></td>
 
               <td data-label="Ação">
                 <form method="post" action="excluir_user.php?codigo=<?= $linhas[0] ?>">

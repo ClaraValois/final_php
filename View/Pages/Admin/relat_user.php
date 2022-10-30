@@ -36,6 +36,7 @@ while ($dados=mysqli_fetch_array($lista)){
     $html.='<td>' .$dados['4']. '</td>';
     $html.='<td>' .$dados['5']. '</td>';
     $html.='<td>' .$dados['6']. '</td>';
+    $html.='<td>' .$dados['7']. '</td>';
     $html.='</tr>';
    
 
