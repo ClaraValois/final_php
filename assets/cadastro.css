@@ -168,6 +168,7 @@
   transition: 0.5s;
 }
 
+
 .box input:valid ~ i::before,
 .box input:focus ~ i::before {
   left: 0;
