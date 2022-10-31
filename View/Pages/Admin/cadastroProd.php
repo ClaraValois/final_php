@@ -3,6 +3,10 @@
 
   $lista = "SELECT * FROM categorias";
   $categorias = $conn->query($lista);
+
+  $lista_marca = "SELECT * FROM marca";
+  $marcas = $conn->query($lista_marca);
+
 ?>
 
 <!DOCTYPE html>
@@ -64,9 +68,9 @@
           <div class="box">
             <select name="marca" id="marca">
             <?php
-            if ($marca->num_rows > 0) {
-              while ($item = $marca->fetch_assoc()) {
-              echo "<option name='" . $item['marca'] . "' id='" . $item['descricao'] . "' value='" . $item['id_marca'] . "'>" . $item['descricao'] . "</option>";
+            if ($marcas->num_rows > 0) {
+              while ($item = $marcas->fetch_assoc()) {
+              echo "<option name='" . $item['descricao'] . "' id='" . $item['descricao'] . "' value='" . $item['id_marca'] . "'>" . $item['descricao'] . "</option>";
               }
             }
             ?>

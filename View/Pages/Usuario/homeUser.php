@@ -36,14 +36,11 @@
       </form>
       <span id="listar-usuarios"></span>
 
-      <button class="searchbutton">
+      <button class="searchbutton" type="submit">
         <img class="iconSearch" src="/final_php/assets/images/iconSearch.png" alt="">
       </button>
     </div>
     </div>
-    <!-- <a href="/requisicoes"> -->
-    <button type="submit" class="btn">Requisições</button>
-    <!-- </a> -->
   </main>
 
   <script>
