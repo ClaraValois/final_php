@@ -7,8 +7,8 @@
     $nomeProduto = $_POST['nomeproduto'];
     $categoriaProduto = $_POST['categoria'];
     $quantidadeProduto = $_POST['quantidade'];
-    $precoProduto = $_POST['preco'];
-    $modeloProduto = $_POST['modelo'];
+    $precoProduto = $_POST['precoproduto'];
+    $modeloProduto = $_POST['modeloproduto'];
 
     if ($quantidadeProduto > 0) {
         $disponibilidadeProduto = 1;
@@ -17,7 +17,7 @@
     }
 
     //povoamento da tabela;
-    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod, id_categoria, quantDisp, id_disponibilidade) VALUES ('$nomeProduto', '$categoriaProduto', '$quantidadeProduto', '$disponibilidadeProduto')");
+    $sql_cadastro = mysqli_query($conn, "INSERT INTO produtoteste (nome_prod, id_categoria, quantDisp, id_disponibilidade, modeloProduto, precoProduto) VALUES ('$nomeProduto', '$categoriaProduto', '$quantidadeProduto', '$disponibilidadeProduto', '$modeloProduto', '$precoProduto')");
 
     //checagem do cadastro;
     if ($sql_cadastro==true){

@@ -36,8 +36,8 @@ create table produtoteste(
   datacaworptura date,
   hora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   id_marca integer not null,  
-  id_modelo integer not null,  
-  id_valor integer not null,
+  modeloProduto varchar(50),  
+  precoProduto double,
   
   foreign key (id_categoria) references categorias (id_categoria),
   foreign key (id_disponibilidade) references disponibilidade (id_disponibilidade)
