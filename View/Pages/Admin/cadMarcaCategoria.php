@@ -9,8 +9,12 @@
 
 
     //povoamento da tabela;
-    $sql_cadastro = mysqli_query($conn, "INSERT INTO marca (descricao) VALUES ('$marcaProduto')");
-    $sql_cadastro = mysqli_query($conn, "INSERT INTO categorias (descricao) VALUES ('$categoriaProduto')");
+    if ($marcaProduto != '') {
+        $sql_cadastro = mysqli_query($conn, "INSERT INTO marca (descricao) VALUES ('$marcaProduto')");
+    }
+    if ($categoriaProduto != '') {
+        $sql_cadastro = mysqli_query($conn, "INSERT INTO categorias (descricao) VALUES ('$categoriaProduto')");
+    }
 
     //checagem do cadastro;
     if ($sql_cadastro==true){
