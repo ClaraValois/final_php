@@ -30,6 +30,18 @@
             <span>Nome do Produto</span>
             <i></i>
           </div>
+
+          <div class="box">
+            <input type="text" name="modeloproduto" required />
+            <span>Modelo do Produto</span>
+            <i></i>
+          </div>
+
+          <div class="box">
+            <input type="text" name="precoproduto" required />
+            <span>Preço do Produto</span>
+            <i></i>
+          </div>
           
           <div class="box">
             <input type="number" name="quantidade" id="quantidade">
@@ -43,6 +55,18 @@
             if ($categorias->num_rows > 0) {
               while ($item = $categorias->fetch_assoc()) {
               echo "<option name='" . $item['categoria'] . "' id='" . $item['descricao'] . "' value='" . $item['id_categoria'] . "'>" . $item['descricao'] . "</option>";
+              }
+            }
+            ?>
+            </select>
+          </div>
+
+          <div class="box">
+            <select name="marca" id="marca">
+            <?php
+            if ($marca->num_rows > 0) {
+              while ($item = $marca->fetch_assoc()) {
+              echo "<option name='" . $item['marca'] . "' id='" . $item['descricao'] . "' value='" . $item['id_marca'] . "'>" . $item['descricao'] . "</option>";
               }
             }
             ?>

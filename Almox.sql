@@ -1,6 +1,14 @@
 create schema almox;
 use almox;
 
+create table marca(
+  id_marca integer auto_increment key,
+  descricao varchar(30)
+);
+
+insert into marca(descricao) values("Bic");
+insert into marca(descricao) values("Gigabyte");
+insert into marca(descricao) values("Veja");
 
 create table categorias(
   id_categoria integer auto_increment key,
@@ -64,10 +72,6 @@ insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nive
 CREATE TABLE modelo ( 
  id_modelo integer auto_increment primary key,  
  descricao_mod varchar(30)); 
-
-CREATE TABLE marca( 
- descricao_marca  integer,  
- id_marca integer auto_increment primary key); 
  
  CREATE TABLE valorProduto ( 
  id_valor integer auto_increment primary key,
@@ -136,4 +140,3 @@ CREATE TABLE entrada (
  foreign key (id_nf) references notafiscal (id_nf),
  foreign key (id_prod) references produto (id_prod)
  ); 
-

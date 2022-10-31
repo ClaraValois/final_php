@@ -7,6 +7,8 @@
     $nomeProduto = $_POST['nomeproduto'];
     $categoriaProduto = $_POST['categoria'];
     $quantidadeProduto = $_POST['quantidade'];
+    $precoProduto = $_POST['preco'];
+    $modeloProduto = $_POST['modelo'];
 
     if ($quantidadeProduto > 0) {
         $disponibilidadeProduto = 1;
