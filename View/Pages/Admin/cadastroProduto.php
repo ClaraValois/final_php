@@ -30,6 +30,6 @@
     } else{
         echo "<script>                    
                     alert ('Falha ao cadastrar Produto!');
-                    window.location.href='cadastroProduto.html';
+                    window.location.href='cadastroProd.php';
                 </script>";
     }
