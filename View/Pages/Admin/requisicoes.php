@@ -25,7 +25,7 @@ include_once dirname(__DIR__, 3) . '/banco.php';
         <div class="container">
             <table>
                 <caption>
-                    Requisicoes
+                    Requisições
                 </caption>
                 <thead>
                     <tr>

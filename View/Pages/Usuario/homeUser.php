@@ -16,8 +16,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/final_php/assets/homeUser.css" />
+  <link rel="stylesheet" href="/final_php/assets/resultados.css"/>
   <!-- <link rel="stylesheet" href="/final_php/assets/template.css"> -->
   <link rel="stylesheet" href="/final_php/assets/template.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,67 +32,42 @@
 
     <div class="containerInput">
       <span id="msg"></span>
-      <form action="" id="form-pesquisar">
         <div class="searchbox">
-          <input name="texto_pesquisar" id="btn-pesquisar" type="text" class="searchinput" placeholder="Buscar produto desejado..." />
-      </form>
-      <span id="listar-usuarios"></span>
-
-      <button class="searchbutton" type="submit">
-        <img class="iconSearch" src="/final_php/assets/images/iconSearch.png" alt="">
-      </button>
+          <input id="live_search" type="text" class="searchinput" placeholder="Buscar produto desejado..."/>
+          <span id="listar-usuarios"></span>
+          
+          <!-- 
+          <button class="searchbutton" type="submit">
+            <img class="iconSearch" src="/final_php/assets/images/iconSearch.png" alt="">
+          </button> -->
+      </div>
     </div>
+
+    <div id="searchResult">
+      <p>Busque algo...</p>
     </div>
   </main>
 
-  <script>
-    // Receber o seletor form-pesquisar
-    const formPesquisar = document.getElementById("form-pesquisar");
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#live_search').keyup(function(){
+        var input = $(this).val();
 
-    // Verificar se existe o form-pesquisar
-    if (formPesquisar) {
-      // Aguardar o submit, quando o usuário clicar no botão executa a função
-      formPesquisar.addEventListener("submit", async (e) => {
+        if(input != ""){
+          $.ajax({
+            url: "pesquisarU.php",
+            method: "POST", 
+            data:{input: input},
 
-        // Bloquear para não recarregar a página
-        e.preventDefault();
-
-        // Substituir o texto do botão para pesquisando
-        document.getElementById("btn-pesquisar").value = "Pesquisando...";
-
-        // Receber os dados do formulário
-        const dadosForm = new FormData(formPesquisar);
-
-        // Imprimir o valor que vem do formulário
-        /*for( var dadosFormPesq of dadosForm.entries()){
-            console.log(dadosFormPesq[0] + " - " + dadosFormPesq[1]);
-        }*/
-
-        // Fazer a requisição para o arquivo pesquisar.php
-        const dados = await fetch("pesquisar.php", {
-          method: "POST",
-          body: dadosForm
-        });
-
-        // Ler os dados retornado do arquivo pesquisar.php
-        const resposta = await dados.json();
-        //console.log(resposta);
-
-        // Acessa o IF quando não retornar nenhum usuário do banco de dados
-        if (!resposta['status']) {
-          // Enviar a mensagem de erro do JavaScript para o HTML
-          document.getElementById("msg").innerHTML = resposta['msg'];
+            success:function(data){
+              $("#searchResult").html(data);
+            }
+          }); 
         } else {
-          // Substituir a mensagem de erro
-          document.getElementById("msg").innerHTML = "";
-          // Enviar a lista de usuário do JavaScript para o HTML
-          document.getElementById("listar-usuarios").innerHTML = resposta['dados'];
+          $("#searchResult").html("<p>Busque algo...</p>");
         }
-
-        // Substituir o texto do botão para pesquisar
-        document.getElementById("btn-pesquisar").value = "Pesquisar";
-      });
-    }
+      })
+    })
   </script>
 </body>
 

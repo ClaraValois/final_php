@@ -39,6 +39,8 @@ create table produtoteste(
   modeloProduto varchar(50),  
   precoProduto double,
   
+  id_prod integer auto_increment primary key,
+  
   foreign key (id_categoria) references categorias (id_categoria),
   foreign key (id_disponibilidade) references disponibilidade (id_disponibilidade)
 );

@@ -1,5 +1,5 @@
 .btn {
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -26,8 +26,7 @@
     width: 100%;
     padding: 10px;
     border: 2px solid rgb(79, 0, 106);
-    border-radius: 10px 0 0 10px;
-    border-right: none;
+    border-radius: 10px;
     outline: none;
     font-size: 20px;
     color: #3d4152;
@@ -54,7 +53,7 @@
   
   .containerInput {
     width: 40%;
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
@@ -67,3 +66,33 @@
   .iconSearch:hover {
     fill: invert(22%) sepia(23%) saturate(524%) hue-rotate(191deg) brightness(97%) contrast(87%);
   } 
+
+  .resultadoPesquisa {
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .radius {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    margin: auto;
+  }
+  
+  .statusRed {
+    background-color: red;
+  }
+
+  .statusGreen {
+    background-color: green;
+  }
+  
+  .statusYellow {
+    background-color: yellow;
+  }
+
+  .statusGray {
+    background-color: gray;
+  }
