@@ -130,3 +130,9 @@ tr:nth-child(odd) {
 .opcoes a:hover {
   background-color: cornflowerblue;
 }
+
+.title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

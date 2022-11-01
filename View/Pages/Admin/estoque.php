@@ -23,9 +23,15 @@
     <main class="main">
         <div class="container">
             <table>
-                <caption>
-                    Estoque
-                </caption>
+              <div class="title-box">
+                <h1 class="title"> Lista de Usuários cadastrados</h1> 
+                <span class='search'>
+                  <a href="pesquisaItem.php">
+                    <img src="/final_php/assets/images/iconSearch.png" class="searchIcon">
+                  </a>
+                </span>
+              </div>
+
                 <thead>
                     <tr>
                         <th scope="col">Produto</th>

@@ -23,7 +23,14 @@ include_once dirname(__DIR__, 3) . '/banco.php';
 
   <main class="main">
     <div class="container">
-      <h1 class="title"> Lista de Usuários cadastrados</h1>
+      <div class="title-box">
+        <h1 class="title"> Lista de Usuários cadastrados</h1> 
+        <span class='search'>
+          <a href="pesquisaUsuario.php">
+            <img src="/final_php/assets/images/iconSearch.png" class="searchIcon">
+          </a>
+        </span>
+      </div>
 
       <table rules="all">
 
@@ -57,7 +64,15 @@ include_once dirname(__DIR__, 3) . '/banco.php';
               <td data-label="E-mail"> <?= $linhas[4] ?></td>
               <td data-label="Telefone"> <?= $linhas[5] ?></td>
               <td data-label="Nível"> <?= $linhas[6] ?></td>
-              <td data-label="Departamento"> <?= $linhas[7] ?></td>
+              <td data-label="Departamento">
+                <?php 
+                  $consulta_categoria = mysqli_query($conn, "SELECT * FROM area_depar WHERE id_area = '$linhas[7]'");
+
+                  while ($categorias = mysqli_fetch_array($consulta_categoria)) {
+                      echo $categorias['depar'];
+                  }
+                ?>    
+              </td>
 
               <td data-label="Ação">
                 <form method="post" action="excluir_user.php?codigo=<?= $linhas[0] ?>">

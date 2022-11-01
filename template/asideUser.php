@@ -5,7 +5,9 @@
             <ul class="list">
                 <li class="list-item">
                     <a href="/final_php/View/Pages/Usuario/homeUser.php">
-                        <img src="/final_php/assets/images/iconHome.png" alt="">
+                        <span class="icon">
+                            <img class="iconHome" src="/final_php/assets/images/iconHome.png" alt="">
+                        </span>
                         <span class="text">Home</span>
                     </a>
                 </li>

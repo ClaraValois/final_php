@@ -240,3 +240,10 @@
       justify-content: space-evenly;
     }
   }
+  
+  .title-box {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
