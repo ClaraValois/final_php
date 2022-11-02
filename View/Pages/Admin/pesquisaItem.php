@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="/final_php/assets/resultados.css"/>
   <!-- <link rel="stylesheet" href="/final_php/assets/template.css"> -->
   <link rel="stylesheet" href="/final_php/assets/template.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/final_php/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/final_php/assets/listas.css">
     <link rel="stylesheet" href="/final_php/assets/global.css">
     <link rel="stylesheet" href="/final_php/assets/template.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/final_php/node_modules/jquery/dist/jquery.min.js"></script>
     <title>Listagens</title>
 </head>
 
