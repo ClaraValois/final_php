@@ -2,12 +2,7 @@
 //* Gera relatório pdf para impressão*//
 include_once dirname(__DIR__, 3) . '/banco.php';
 
-
-
-
 $html ='<table>'; //* Dentro, será reconhecido código html dentro do documento php*//
-
-
 $html.='<thead>';
 $html.='<tr>'; //* cria linha para os dados*//
 $html.='<th> Usuário </th>';
@@ -53,8 +48,8 @@ $dompdf = new DOMPDF();
 
 //* loadhtml responsável por mostrar os dados em html*//
 $dompdf -> loadHtml('
-
-<h1> Relatório </h1>'.$html.'
+<link rel="stylesheet" href="/assets/listarUser.css">
+<h1 style =" text-align: center;"> Listas de Usuários </h1>'.$html.'
 
 ');
 
@@ -64,9 +59,9 @@ $dompdf->render();
 //exibe os dados renderizados
 $dompdf-> stream(
     
-    "LISTA DE USUÁRIOS",
+    "Relatório_Usuários.pdf",
     array(
-        "attachment"=> FALSE //false para baixar o pdf, caso seja true o download é automático
+        "Attachment"=> FALSE //false para baixar o pdf, caso seja true o download é automático
     )
 );
 
