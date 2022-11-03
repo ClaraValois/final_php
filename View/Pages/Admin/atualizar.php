@@ -15,9 +15,6 @@ $depar = $_POST['depar'];
 $atualizar= mysqli_query( $conn, " UPDATE usuarios SET nome_user='$nome', senha='$senha', email_user='$email', cpf='$cpf',
 telefone='$telefone', nivel='$nivel', id_area = '$depar' WHERE id_user='$id_user'" );
 
-
-
-
     if ($atualizar==true){
 
         echo "<script>     
