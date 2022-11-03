@@ -43,14 +43,9 @@
 
   if(count($_SESSION['itens']) == 0) {
     echo "Carrinho Vazio <br><a href='./View/Pages/Usuario/homeUser.php'>Adicionar Itens</a>";
-  } else {
-    foreach($_SESSION['itens'] as $idProduto => $quantidade) {
-      $query = "SELECT * FROM produtoteste WHERE id_prod = $idProduto";
-      $result = mysqli_query($conn, $query);
+  } else {?>
 
-      if (mysqli_num_rows($result) > 0){?>
-
-        <table class='resultadoPesquisa'>
+    <table class='resultadoPesquisa'>
         <thead>
           <th scope="col">Produto</th>
           <th scope="col">Modelo</th>
@@ -58,8 +53,15 @@
           <th scope="col">Categoria</th>
           <th scope="col">Ações</th>
         </thead>
-      
         <tbody>
+
+      <?php
+    foreach($_SESSION['itens'] as $idProduto => $quantidade) {
+      $query = "SELECT * FROM produtoteste WHERE id_prod = $idProduto";
+      $result = mysqli_query($conn, $query);
+
+      if (mysqli_num_rows($result) > 0){?>
+      
           <?php
             while($row = mysqli_fetch_assoc($result)) {
               $produto = $row['nome_prod'];
@@ -92,11 +94,14 @@
             }
            }
           ?>
-        </tbody>
-      </table>
-
       <?php
       }
+      ?>
+      
+      </tbody>
+    </table>
+
+  <?php
     }
   ?>
 </body>
