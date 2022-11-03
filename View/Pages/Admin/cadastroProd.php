@@ -48,7 +48,7 @@
           </div>
           
           <div class="box">
-            <input type="number" name="quantidade" id="quantidade">
+            <input type="number" name="quantidade" id="quantidade" required>
             <span>Quantidade</span>
             <i></i>
           </div>
