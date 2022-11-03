@@ -61,7 +61,7 @@
                             <div class="radius" id="statusGreen"></div>
                         </td>
                         <td data-label="Ação">
-                            <button class="btnActions" id="myBtn">Detalhes</button>
+                            <button class="btnActions" id="myBtn">Adicionar ao Carrinho</button>
                         </td>
                     </tr>
                 </tbody>

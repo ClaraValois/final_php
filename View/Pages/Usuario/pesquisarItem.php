@@ -22,6 +22,7 @@
         <tbody>
           <?php
             while($row = mysqli_fetch_assoc($result)) {
+              $id_prod = $row['id_prod'];
               $produto = $row['nome_prod'];
               $modelo = $row['modeloProduto'];
               $quantidade = $row['quantDisp'];
@@ -60,7 +61,12 @@
               ?>
             </td>
             <td data-label="Ação">
-              <button class="btnActions" id="myBtn">Detalhes</button>
+              <button class="btnActions" id="myBtn">
+                <?php
+                  echo "<a style='text-decoration: none; color: inherit;' href='/final_php/carrinho.php?add=carrinho&id=" . $id_prod . "'>
+                          Adicionar ao Carrinho
+                      </a>"?>
+              </button>
             </td>
           </tr>
 
