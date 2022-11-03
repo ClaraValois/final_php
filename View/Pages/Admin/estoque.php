@@ -26,7 +26,7 @@
               <div class="title-box">
                 <h1 class="title"> Lista de Usuários cadastrados</h1> 
                 <span class='search'>
-                  <a href="pesquisaItem.php">
+                  <a href="./pesquisaItem.php">
                     <img src="/final_php/assets/images/iconSearch.png" class="searchIcon">
                   </a>
                 </span>
