@@ -60,7 +60,7 @@
               ?>
             </td>
             <td data-label="Ação">
-              <button class="btnActions" id="myBtn">Detalhes</button>
+              <button class="btnRequi" onclick="dialogv2.showModal()">Detalhes</button>
             </td>
           </tr>
 
@@ -75,8 +75,102 @@
         </tbody>
       </table>
 
+      <dialog id="dialogv2">
+        <div>
+          <button class="btnClose"
+            class="close-dialog-btn"
+            onclick="this.closest('dialog').close('close')">
+            X
+          </button>
+          <h1><?php echo $produto?></h1>
+          </div>
+
+        <div class="content">
+          <div class="detailsProduct">
+            <p className="products"><?php echo $produto?> </p>
+
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
+
+            <div class="custom-checkbox">
+              <input type="radio" id="radio_1" name="avaliacao"
+                id="avaliacao_checkbox" value="10">
+              <label for="radio_1"></label>
+            </div>
+          </div>
+          
+          <div >
+            <!-- <button class="btn">Voltar</button> -->
+            <button class="btn">Requisitar</button>
+
+          </div>
+        </dialog>
+
       <?php
     } else {
       echo "<span class='wrong'>Nenhuma correspondência encontrada.</span>";
     }
 ?>
+
+<style>
+   .btnRequi {
+  background: #fff;
+  color: rgb(79, 0, 106);
+  padding: 0.4rem;
+  border: 0.2rem solid rgb(79, 0, 106);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btnRequi:hover {
+  background-color: rgb(79, 0, 106);
+color: #fff;}
+  dialog {
+    font-size: 1rem;
+    margin: auto;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%);
+    width: 30rem;
+    background: #f4f4f4;
+    border-radius: 3px;
+    position: relative;
+    /* width: 300px; */
+    /* max-width: 100%; */
+    border: none;
+    padding: 0;
+    height: 20rem;
+}
+
+dialog header {
+  background: #cccccc;
+  padding: 0.5em;
+  text-align: right;
+  border-radius: 3px 0 0 3px;
+}
+
+dialog p {
+  padding: 1em; 
+}
+
+.close-dialog-btn {
+  border-radius: 100%;
+  border: none;
+  padding: 0.5em;
+  width: 30px;
+  height: 30px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(15px);
+}
+
+
+.btnClose{
+  background-color: rgb(79, 0, 106);
+    color: #fff;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+</style>

@@ -18,12 +18,12 @@
 
             <form method="POST" action="cadMarcaCategoria.php" class="form">
         <div class="box">
-          <input type="text" name="marcaproduto" />
+          <input type="text" name="marcaproduto" required/>
           <span>Nome da Marca</span>
           <i></i>
         </div>
         <div class="box">
-          <input type="text" name="categoriaproduto" />
+          <input type="text" name="categoriaproduto" required/>
           <span>Nome da categoria</span>
           <i></i>
         </div>
