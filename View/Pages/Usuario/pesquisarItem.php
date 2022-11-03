@@ -11,6 +11,7 @@
       
       <table class='resultadoPesquisa'>
         <thead>
+          <th scope="col">ID</th>
           <th scope="col">Produto</th>
           <th scope="col">Modelo</th>
           <th scope="col">Quantidade</th>
@@ -28,9 +29,10 @@
               $quantidade = $row['quantDisp'];
               $categoria = $row['id_categoria'];
               $status = $row['id_disponibilidade'];
-              ?>
+            ?>
 
           <tr>
+            <td data-label='ID'><?php echo $id_prod;?></td>
             <td data-label="Produto"><?php echo $produto;?></td>
             <td data-label="Modelo"><?php echo $modelo;?></td>
             <td data-label="Quantidade"><?php echo $quantidade;?></td>
@@ -63,23 +65,14 @@
             <td data-label="Ação">
 
               <button class="btnRequi" onclick="dialogv2.showModal()">Detalhes</button>
-              <button class="btnActions" id="myBtn">
-                <?php
-                  echo "<a style='text-decoration: none; color: inherit;' href='/final_php/carrinho.php?add=carrinho&id=" . $id_prod . "'>
-                          Adicionar ao Carrinho
-                      </a>"?>
-              </button>
             </td>
           </tr>
-
-            <?php
-          }
-            
-          ?>
-
+          
           <?php
             }
           ?>
+
+   
         </tbody>
       </table>
 
@@ -93,35 +86,70 @@
           <h1><?php echo $produto?></h1>
           </div>
 
-        <div class="content">
+        <form action="/final_php/carrinho.php" method="post">
+
+          <div class="content">
           <div class="detailsProduct">
-            <p className="products"><?php echo $produto?> </p>
+            <p class="products">Quantidade</p>
+
 
             <div class="counter">
+              <!-- onClick="decreaseCount(event, this)" -->
+              <!-- onClick="increaseCount()" -->
               <span class="down" onClick="decreaseCount(event, this)">-</span>
-              <input type="text" value="1" />
+              <input type="text" value="1" min="1" max="99" name="quantidadeProd"/>
               <span class="up" onClick="increaseCount(event, this)">+</span>
+              <?php echo "<input style='display: none;' value='$id_prod' name='id_prod'"?>
             </div>
 
-            <div class="custom-checkbox">
+            <!-- <div class="custom-checkbox">
               <input type="radio" id="radio_1" name="avaliacao"
                 id="avaliacao_checkbox" value="10">
-              <label for="radio_1"></label>
+              <label for="radio_1"></label> -->
             </div>
           </div>
           
-          <div >
-            <!-- <button class="btn">Voltar</button> -->
-            <button class="btn">Requisitar</button>
-
+          <div class='adicionarCarrinhoDiv'>
+            <button class="btnActions" id="myBtn" type="submit">
+              Enviar ao Carrinho
+            </button>
           </div>
+
+        </form>
+          
+        
         </dialog>
+
+        <?php
+            }
+          ?>
 
       <?php
     } else {
       echo "<span class='wrong'>Nenhuma correspondência encontrada.</span>";
     }
 ?>
+
+
+<script>
+  function increaseCount(a, b) {
+  
+  var input = b.previousElementSibling;
+  var value = parseInt(input.value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  input.value = value;
+  }
+  function decreaseCount(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 1) {
+      value = isNaN(value) ? 0 : value;
+      value--;
+      input.value = value;
+    }
+  }
+</script>
 
 <style>
    .btnRequi {
@@ -181,4 +209,9 @@ dialog::backdrop {
     padding: 0.4rem;
     cursor: pointer;
 }
+
+.adicionarCarrinhoDiv {
+  text-align: center;
+}
+
 </style>

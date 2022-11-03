@@ -12,7 +12,7 @@
     <p style='color: white;'>Olá, <?php echo $_SESSION['username']?></p>
     <p></p>
 
-    <a href="/carrinho">
+    <a href="/final_php/carrinho.php">
       <img class="iconCar" src="/final_php/assets/images/carrinho.png" alt="">
     </a>
   </div>

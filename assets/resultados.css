@@ -134,7 +134,7 @@ table th {
 
 .detailsProduct {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
@@ -282,8 +282,8 @@ h1 {
 }
 /* Fim do CheckBox */
 
-.counter {
-  width: 100px;
+.counter, .products {
+  width: 50%;
   margin: auto;
   display: flex;
   align-items: center;
