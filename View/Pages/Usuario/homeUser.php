@@ -29,7 +29,7 @@
     <?php include dirname(__DIR__, 3) . "/template/footer.php"; ?>
 
     <main class="main">
-
+ <h1 class="title">Seja bem-vindo <?php echo $_SESSION['normal'] . '' ?>, o que você deseja?</h1>
         <div class="containerInput">
             <div class="searchbox">
                 <input id="live_search" type="text" class="searchinput" placeholder="Buscar produto desejado..." />
