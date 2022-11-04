@@ -1,4 +1,3 @@
-drop schema almox;
 create schema almox;
 use almox;
 
@@ -64,7 +63,7 @@ create table produtoteste(
 );
 
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Detergente', 21, 4, 1, 11, 'Coco');
-insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Teclado', 4, 3, 1, 14, 'RGB');
+insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Teclado', 0, 3, 1, 14, 'RGB');
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Caneta', 75, 1, 1, 7, 'Azul Bico Fino');
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Caderno', 42, 1, 1, 6, 'Brochurão');
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Azulim', 0, 4, 2, 9, 'Limpa Tudo');
@@ -100,9 +99,11 @@ insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Eduardo Haaland', 'manchester123', '144.433.124-55', 'cityty@gmail.com', '(78) 9 9433-2323', 0, 1);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Ricardo Sena', 'seninha123', '883.4222.111-42', 'seninharicardo@gmail.com', '(75) 9 9923-4244', 0, 1);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D\'Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 1);
+#insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
+
 
 insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel, id_area )
- values(NULL,'Maria', '12345678', '123.456.789-00', 'clara@gmail', '(77) 9 1234-5678', '1', '3' );
+ values(NULL,'Maria Clara', '12345678', '123.456.789-00', 'clara@gmail', '(77) 9 1234-5678', '1', '3' );
 
 select *from usuarios;
 
