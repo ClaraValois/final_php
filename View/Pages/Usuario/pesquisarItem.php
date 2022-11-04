@@ -29,6 +29,8 @@
               $quantidade = $row['quantDisp'];
               $categoria = $row['id_categoria'];
               $status = $row['id_disponibilidade'];
+
+              if ($status == 1) {
             ?>
 
           <tr>
@@ -71,10 +73,6 @@
             }
           ?>
 
-   
-        </tbody>
-      </table>
-
       <dialog id="dialogv2">
         <div>
           <button class="btnClose"
@@ -115,7 +113,11 @@
 
         <?php
             }
+          }
           ?>
+
+      </tbody>
+      </table>
 
       <?php
     } else {
