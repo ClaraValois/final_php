@@ -57,7 +57,7 @@
 
       <?php
     foreach($_SESSION['itens'] as $idProduto => $quantidade) {
-      $query = "SELECT * FROM produtoteste WHERE id_prod = $idProduto";
+      $query = "SELECT * FROM produtoteste WHERE id_prod = '$idProduto'";
       $result = mysqli_query($conn, $query);
 
       if (mysqli_num_rows($result) > 0){?>
