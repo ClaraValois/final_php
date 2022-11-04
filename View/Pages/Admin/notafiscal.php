@@ -33,14 +33,14 @@ if (isset($_POST['upload'])){
 ?>
 
 
-        <form method="POST" enctype="multipart/form-data" action="">
+        <form method="POST" enctype="multipart/form-data" action="/final_php/View/Pages/Admin/arquivos">
             <p><label for=""> Selecione o arquivo</label>
                 <input name="file" type="file">
             </p>
             <input class="btnUpload" type="submit" name="upload" value=" Enviar arquivo">
         
             <div>
-            <a href="/final_php/View/Pages/Admin/arquivos/">
+            <a href="/final_php/View/Pages/Admin/arquivos">
                 <button class="btn">Arquivos</button>
             </a>
         </div>
