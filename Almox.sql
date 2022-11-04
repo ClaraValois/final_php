@@ -1,4 +1,3 @@
-#drop schema almox;
 create schema almox;
 use almox;
 
@@ -115,11 +114,9 @@ insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Leila Pereira', 'crefisa123', '422.335.553-43', 'verdaocref@gmail.com', '(31) 9 9421-2223', 0, 4);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Eduardo Haaland', 'manchester123', '144.433.124-55', 'cityty@gmail.com', '(78) 9 9433-2323', 0, 6);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Ricardo Sena', 'seninha123', '883.4222.111-42', 'seninharicardo@gmail.com', '(75) 9 9923-4244', 0, 4);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D\'Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 5);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 5);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Rony Bike', 'bicicleta123', '314.223.155-23', 'roony10@outlook.com', '(77) 9 3155-2342', 1, 1);
-#insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
-
-select *from usuarios;
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
 
 CREATE TABLE modelo ( 
  id_modelo integer auto_increment primary key,  

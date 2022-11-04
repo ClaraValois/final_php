@@ -95,10 +95,12 @@
                         <td data-label="Ação">
                             <!-- <img class="iconEdit" src="/final_php/assets/images/iconEdit.png" alt="icone de edit" id="myBtn"> -->
 
-                            <form method="POST" action="atualizarEstoque.php?id_prod=<?= $linhas['id_prod'] ?>">
-                                <img src="/final_php/assets/images/iconDelete.png" alt="icone excluir"
+                            <form method="POST" action="atualizarEstoque.php?id_prod=<?php echo $linhas[9] ?>">
+                                <button type="submit">
+                                    <img src="/final_php/assets/images/iconDelete.png" alt="icone excluir"
                                     onclick="return confirm('Deseja remover esse produto do estoque?')">
-                            </form>
+                                </button>
+                                </form>
                         </td>
 
                         <td>

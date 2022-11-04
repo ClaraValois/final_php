@@ -27,7 +27,7 @@ if(isset($_POST['atualizar'])){
 
   $id_prod = $_GET['id_prod'];
   
-$excluir=mysqli_query($conn, "DELETE FROM produtoteste WHERE id_prod ='${id_prod}'");
+$excluir=mysqli_query($conn, "DELETE FROM produtoteste WHERE id_prod ='$id_prod'");
 
     if ($excluir==true) {
       echo "
