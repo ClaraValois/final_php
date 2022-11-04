@@ -1,16 +1,6 @@
 <?php
   include_once dirname(__DIR__, 3) . '/banco.php';
 
-  $idX = 0;
-
-  function setID($id){
-    $idX = $id;
-  }
-
-  function getID(){
-    return $idX;
-  }
-
   if (isset($_POST['input'])){
     $input = $_POST['input'];
     $query = "SELECT * FROM produtoteste WHERE nome_prod LIKE '{$input}%' OR modeloProduto LIKE '{$input}%'";

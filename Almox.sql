@@ -105,6 +105,7 @@ id_area integer not null,
 
 insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel, id_area )
  values(NULL,'Maria Clara', '12345678', '123.456.789-00', 'clara@gmail', '(77) 9 1234-5678', '1', '3' );
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Fernando Rangel', '12345678', '111.222.333-00', 'maracana123@outlook.com', '(77) 9 4451-5122', 0, 4); 
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Kauê Henrick', 'flamengo1234', '105.669.505-69', 'palmeiraseuteamo@outlook.com', '(77) 9 9804-9942', 1, 3);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Pedro Lima', 'hungria213', '421.467.228-45', 'limasii24@gmail.com', '(77) 9 9969-7714', 0, 3);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('George Castro', 'george123', '331.427.534-12', 'castroo23@gmail.com', '(77) 9 9884-3222', 0, 1);
@@ -115,6 +116,7 @@ insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Eduardo Haaland', 'manchester123', '144.433.124-55', 'cityty@gmail.com', '(78) 9 9433-2323', 0, 6);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Ricardo Sena', 'seninha123', '883.4222.111-42', 'seninharicardo@gmail.com', '(75) 9 9923-4244', 0, 4);
 insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D\'Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 5);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Rony Bike', 'bicicleta123', '314.223.155-23', 'roony10@outlook.com', '(77) 9 3155-2342', 1, 1);
 #insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
 
 select *from usuarios;
