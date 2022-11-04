@@ -102,10 +102,6 @@
               <?php echo "<input style='display: none;' value='$id_prod' name='id_prod'"?>
             </div>
 
-            <!-- <div class="custom-checkbox">
-              <input type="radio" id="radio_1" name="avaliacao"
-                id="avaliacao_checkbox" value="10">
-              <label for="radio_1"></label> -->
             </div>
           </div>
           
