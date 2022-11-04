@@ -75,6 +75,9 @@
                                 case 3:
                                     echo "<div class='radius statusYellow'></div>";
                                     break;
+                                case 4:
+                                    echo "<div class='radius statusGray'></div>";
+                                    break;
                                 default:
                                     echo "<div class='radius statusGray'></div>";
                             }
