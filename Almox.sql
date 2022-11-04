@@ -1,3 +1,4 @@
+#drop schema almox;
 create schema almox;
 use almox;
 
@@ -69,6 +70,8 @@ insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade,
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Azulim', 0, 4, 2, 9, 'Limpa Tudo');
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Monitor', 3, 3, 1, 14, 'HD 60hz');
 insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Processador', 21, 3, 1, 13, 'i3-7007u');
+insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('Memória RAM', 11, 3, 1, 15, '2666mhz');
+insert into produtoteste(nome_prod, quantDisp, id_categoria, id_disponibilidade, id_marca, modeloProduto) value ('HD Interno', 53, 3, 1, 15, '1TB');
 
 
 create table area_depar(
@@ -92,18 +95,19 @@ id_area integer not null,
  foreign key (id_area) references area_depar (id_area)
 );
 
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Georgian de Arrascaeta', 'flamengo1234', '047.014.014-67', 'dearrasca@gmail.com', '(77) 9 9999-0014', 1, 2);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('German Cano', 'fluzaocampeao', '111.426.555-14', 'canobrocador@hotmail.com', '(77) 9 9194-4222', 0, 3);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Hernanes Luiz', 'luiz123123', '561.782.365-10', 'hernanesss@outlook.com', '(75) 9924-4311', 0, 2);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Leila Pereira', 'crefisa123', '422.335.553-43', 'verdaocref@gmail.com', '(31) 9 9421-2223', 0, 1);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Eduardo Haaland', 'manchester123', '144.433.124-55', 'cityty@gmail.com', '(78) 9 9433-2323', 0, 1);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Ricardo Sena', 'seninha123', '883.4222.111-42', 'seninharicardo@gmail.com', '(75) 9 9923-4244', 0, 1);
-insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D\'Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 1);
-#insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
-
-
 insert into usuarios (id_user, nome_user, senha, cpf, email_user, telefone, nivel, id_area )
  values(NULL,'Maria Clara', '12345678', '123.456.789-00', 'clara@gmail', '(77) 9 1234-5678', '1', '3' );
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Kauê Henrick William de Jesus Weber', 'flamengo1234', '105.669.505-69', 'palmeiraseuteamo@outlook.com', '(77) 9 9804-9942', 1, 4);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Pedro Lima', 'hungria213', '421.467.228-45', 'limasii24@gmail.com', '(77) 9 9969-7714', 0, 2);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('George Castro', 'george123', '331.427.534-12', 'castroo23@gmail.com', '(77) 9 9884-3222', 0, 2);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Georgian de Arrascaeta', 'flamengo1234', '047.014.014-67', 'dearrasca@gmail.com', '(77) 9 9969-0014', 1, 2);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('German Cano', 'fluzaocampeao', '111.426.555-14', 'canobrocador@hotmail.com', '(77) 9 9194-4222', 0, 3);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Hernanes Luiz', 'luiz123123', '561.782.365-10', 'hernanesss@outlook.com', '(75) 9924-4311', 0, 2);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Leila Pereira', 'crefisa123', '422.335.553-43', 'verdaocref@gmail.com', '(31) 9 9421-2223', 0, 4);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Eduardo Haaland', 'manchester123', '144.433.124-55', 'cityty@gmail.com', '(78) 9 9433-2323', 0, 1);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Ricardo Sena', 'seninha123', '883.4222.111-42', 'seninharicardo@gmail.com', '(75) 9 9923-4244', 0, 4);
+insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('Joana D\'Arc', 'franca1899', '443.115.866-34', 'joaaana@hotmail.com', '(88) 9 9431-2323', 0, 1);
+#insert into usuarios(nome_user, senha, cpf, email_user, telefone, nivel, id_area) value ('cocorico', '123456789', '000.000.000-00', 'cocorico@hotmail.com', '(88) 9 9431-2323', 0, 1);
 
 select *from usuarios;
 
