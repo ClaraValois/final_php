@@ -31,7 +31,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/final_php/assets/homeUser.css" />
     <link rel="stylesheet" href="/final_php/assets/resultados.css" />
-    <!-- <link rel="stylesheet" href="/final_php/assets/template.css"> -->
     <script src="/final_php/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 
@@ -42,7 +41,7 @@
   // Exibe
 
   if(count($_SESSION['itens']) == 0) {
-    echo "Carrinho Vazio <br><a href='./View/Pages/Usuario/homeUser.php'>Adicionar Itens</a>";
+    echo "Carrinho Vazio <br><a href='/final_php/View/Pages/Usuario/homeUser.php'>Adicionar Itens</a>";
   } else {?>
 
     <table class='resultadoPesquisa'>

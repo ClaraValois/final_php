@@ -1,6 +1,16 @@
 <?php
   include_once dirname(__DIR__, 3) . '/banco.php';
 
+  $idX = 0;
+
+  function setID($id){
+    $idX = $id;
+  }
+
+  function getID(){
+    return $idX;
+  }
+
   if (isset($_POST['input'])){
     $input = $_POST['input'];
     $query = "SELECT * FROM produtoteste WHERE nome_prod LIKE '{$input}%' OR modeloProduto LIKE '{$input}%'";
@@ -63,8 +73,7 @@
               ?>
             </td>
             <td data-label="Ação">
-
-              <button class="btnRequi" onclick="dialogv2.showModal()">Detalhes</button>
+              <button class="btnRequi" onclick="dialogv2.showModal(); setID(<?php echo $id_prod;?>);">Detalhes</button>
             </td>
           </tr>
           
@@ -94,12 +103,12 @@
 
 
             <div class="counter">
-              <!-- onClick="decreaseCount(event, this)" -->
-              <!-- onClick="increaseCount()" -->
               <span class="down" onClick="decreaseCount(event, this)">-</span>
               <input type="text" value="1" min="1" max="99" name="quantidadeProd"/>
               <span class="up" onClick="increaseCount(event, this)">+</span>
-              <?php echo "<input style='display: none;' value='$id_prod' name='id_prod'"?>
+              <?php 
+                echo "<input style='display: none;' id='id_prod' name='id_prod'</input>";
+              ?>
             </div>
 
             </div>
@@ -111,9 +120,7 @@
             </button>
           </div>
 
-        </form>
-          
-        
+        </form>        
         </dialog>
 
         <?php
@@ -128,6 +135,19 @@
 
 
 <script>
+  var idX;
+  var id_prod = document.getElementById('id_prod');
+
+  function setID(id) {
+    idX = id; 
+    console.log(id);
+    getID();
+  }
+
+  function getID() {
+    id_prod.setAttribute("value", idX);
+  }
+
   function increaseCount(a, b) {
   
   var input = b.previousElementSibling;
