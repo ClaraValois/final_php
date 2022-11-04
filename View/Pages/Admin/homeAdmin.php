@@ -31,5 +31,8 @@
     <a href="/final_php/View/Pages/Admin/listas.php">
       <button class="btn">Listas</button>
     </a>
+    <a href="/final_php/View/Pages/Admin/notafiscal.php">
+      <button class="btn">Upload de Notas fiscais</button>
+    </a>
   </div>
 </main>
