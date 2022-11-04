@@ -35,6 +35,8 @@
                 <thead>
                     <tr>
                         <th scope="col">Produto</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Marca</th>
                         <th scope="col">Quantidade</th>
                         <th scope="col">Status</th>
                         <th scope="col">Categoria</th>
@@ -50,6 +52,16 @@
 
                     <tr class="tr">
                         <td data-label="Produto"><?= $linhas[0] ?></td>
+                        <td data-label="Modelo"><?= $linhas[7] ?></td>
+                        <td data-label="Categoria">
+                            <?php 
+                                $consulta_marca = mysqli_query($conn, "SELECT * FROM marca WHERE id_marca = '$linhas[6]'");
+
+                                while ($categoria = mysqli_fetch_array($consulta_marca)) {
+                                    echo $categoria['descricao'];
+                            }
+                            ?>
+                        </td>
                         <td data-label="Quantidade"><?= $linhas[1] ?></td>
                         <td data-label="Status" class="status">
                             <?php                         
