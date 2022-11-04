@@ -12,6 +12,8 @@
 
     if ($quantidadeProduto > 0) {
         $disponibilidadeProduto = 1;
+    } else if ($quantidadeProduto === null) {
+        $disponibilidadeProduto = 4;
     } else {
         $disponibilidadeProduto = 2;
     }

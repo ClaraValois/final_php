@@ -40,10 +40,7 @@
 
 <body>
 
-
-
-
-    <div class="content">    <?php
+    <div class="content"> <?php
 
   // Exibe
 
@@ -119,8 +116,8 @@
 </html>
 
 <style>
-  p{
+p {
     color: white;
     font-size: 35px;
-  }
+}
 </style>

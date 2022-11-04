@@ -56,14 +56,22 @@ include_once dirname(__DIR__, 3) . '/banco.php';
           $total = mysqli_num_rows($sql_consulta);
           while ($linhas = mysqli_fetch_array($sql_consulta)) { ?>
 
-            <tr>
+            <tr class='row'>
               <td data-label="Código"> <?= $linhas[0] ?> </td>
               <td data-label="Usuário"> <?= $linhas[1] ?> </td>
               <td data-label="Senha"> <?= $linhas[2] ?></td>
               <td data-label="CPF"> <?= $linhas[3] ?></td>
               <td data-label="E-mail"> <?= $linhas[4] ?></td>
               <td data-label="Telefone"> <?= $linhas[5] ?></td>
-              <td data-label="Nível"> <?= $linhas[6] ?></td>
+              <td data-label="Nível"> 
+                <?php 
+                  if($linhas[6] == 1) {
+                    echo "Admin";
+                  } else {
+                    echo "Usuário";
+                  }
+                ?>
+              </td>
               <td data-label="Departamento">
                 <?php 
                   $consulta_categoria = mysqli_query($conn, "SELECT * FROM area_depar WHERE id_area = '$linhas[7]'");
@@ -75,10 +83,10 @@ include_once dirname(__DIR__, 3) . '/banco.php';
               </td>
 
               <td data-label="Ação">
-                <form method="post" action="excluir_user.php?codigo=<?= $linhas[0] ?>">
+                <a href="excluir_user.php?codigo=<?= $linhas[0] ?>">
                   <img src="/final_php/assets/images/iconDelete.png" alt="icone Excluir" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')">
                   <!-- <input type="submit" style="background: inherit; font-family: inherit; font-size: inherit; color: white; cursor: pointer;" name="excluirBtn" value="Excluir" onclick="return confirm('Deseja deletar este usuário?')"> -->
-                </form>
+                </a>
               </td>
               <td data-label="Ação">
                 <a href="./editar_user.php?codigo=<?= $linhas[0] ?>">
